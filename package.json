@@ -7,8 +7,10 @@
     "lint": "env DEBUG=eslint:eslint eslint --fix .",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "preview": "pnpm run build && wrangler pages dev",
+    "postinstall": "nuxt prepare",
+    "deploy": "pnpm run build && wrangler pages deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "nuxt": "^3.14.1592",
@@ -16,10 +18,14 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
     "@nuxt/eslint": "^0.7.2",
     "@nuxt/eslint-config": "^0.7.2",
     "@poupe/eslint-config": "^0.3.1",
-    "vite-plugin-eslint2": "^5.0.3"
+    "h3": "^1.13.0",
+    "nitro-cloudflare-dev": "^0.2.1",
+    "vite-plugin-eslint2": "^5.0.3",
+    "wrangler": "^3.91.0"
   },
   "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
 }
