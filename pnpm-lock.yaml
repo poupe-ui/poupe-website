@@ -8,18 +8,12 @@ importers:
 
   .:
     dependencies:
-      '@nuxtjs/tailwindcss':
-        specifier: 6.12.2
-        version: 6.12.2(magicast@0.3.5)(rollup@4.27.4)
       '@poupe/theme-builder':
         specifier: ^0.2.0
         version: 0.2.0(@material/material-color-utilities@0.3.0)(tailwindcss@3.4.15)
       nuxt:
         specifier: ^3.14.1592
         version: 3.14.1592(@parcel/watcher@2.5.0)(@types/node@22.10.1)(eslint@8.57.1)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.27.4)(terser@5.36.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.1)(terser@5.36.0))
-      tailwindcss:
-        specifier: ^3.4.15
-        version: 3.4.15
       vue:
         specifier: latest
         version: 3.5.13(typescript@5.7.2)
@@ -36,6 +30,9 @@ importers:
       '@nuxt/eslint-config':
         specifier: ^0.7.2
         version: 0.7.2(@vue/compiler-sfc@3.5.13)(eslint@8.57.1)(typescript@5.7.2)
+      '@nuxtjs/tailwindcss':
+        specifier: 6.12.2
+        version: 6.12.2(magicast@0.3.5)(rollup@4.27.4)
       '@poupe/eslint-config':
         specifier: ^0.3.1
         version: 0.3.1(@stylistic/eslint-plugin@2.11.0(eslint@8.57.1)(typescript@5.7.2))(@vue/eslint-config-typescript@13.0.0(eslint-plugin-vue@9.31.0(eslint@8.57.1))(eslint@8.57.1)(typescript@5.7.2))(eslint-config-unjs@0.4.1(eslint@8.57.1)(typescript@5.7.2))(eslint-plugin-vue@9.31.0(eslint@8.57.1))(eslint@8.57.1)(typescript@5.7.2)
@@ -45,6 +42,9 @@ importers:
       nitro-cloudflare-dev:
         specifier: ^0.2.1
         version: 0.2.1
+      tailwindcss:
+        specifier: ^3.4.15
+        version: 3.4.15
       vite-plugin-eslint2:
         specifier: ^5.0.3
         version: 5.0.3(eslint@8.57.1)(rollup@4.27.4)(vite@5.4.11(@types/node@22.10.1)(terser@5.36.0))
