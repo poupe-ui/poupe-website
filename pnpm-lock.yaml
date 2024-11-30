@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@poupe/theme-builder':
         specifier: ^0.2.0
-        version: 0.2.0(@material/material-color-utilities@0.3.0)(tailwindcss@3.4.15)
+        version: 0.2.1(@material/material-color-utilities@0.3.0)(tailwindcss@3.4.15)
       nuxt:
         specifier: ^3.14.1592
         version: 3.14.1592(@parcel/watcher@2.5.0)(@types/node@22.10.1)(eslint@8.57.1)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.27.4)(terser@5.36.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.1)(terser@5.36.0))
@@ -1027,8 +1027,8 @@ packages:
       eslint-plugin-vue: ^9.25.0
       typescript: ^5.4.5
 
-  '@poupe/theme-builder@0.2.0':
-    resolution: {integrity: sha512-ql1A3UsEiYCl2wiL+hht8Q8ByR9BMRXNFv1UyxvYZk+Fjh7Dc4/G75SO1nSnuxq2vhSGo0ruHX3p3rEcXywQ+w==}
+  '@poupe/theme-builder@0.2.1':
+    resolution: {integrity: sha512-Yg7kDIfoX9rA+tZ+aWtWO5HUXvUEPaBwBI2nHF5QDpLY2L3Cu/nUFALwG6w+fsWA/LE8sET/UY6wwAnOAlUVPQ==}
     engines: {node: '>= 18', pnpm: '>= 8'}
     peerDependencies:
       '@material/material-color-utilities': ^0.3.0
@@ -5639,7 +5639,7 @@ snapshots:
       eslint-plugin-vue: 9.31.0(eslint@8.57.1)
       typescript: 5.7.2
 
-  '@poupe/theme-builder@0.2.0(@material/material-color-utilities@0.3.0)(tailwindcss@3.4.15)':
+  '@poupe/theme-builder@0.2.1(@material/material-color-utilities@0.3.0)(tailwindcss@3.4.15)':
     dependencies:
       '@material/material-color-utilities': 0.3.0
       tailwindcss: 3.4.15
