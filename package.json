@@ -12,17 +12,20 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@poupe/theme-builder": "^0.2.0",
     "nuxt": "^3.14.1592",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241127.0",
+    "@nuxtjs/tailwindcss": "6.12.2",
     "@nuxt/eslint": "^0.7.2",
     "@nuxt/eslint-config": "^0.7.2",
     "@poupe/eslint-config": "^0.3.1",
     "h3": "^1.13.0",
     "nitro-cloudflare-dev": "^0.2.1",
+    "tailwindcss": "^3.4.15",
     "vite-plugin-eslint2": "^5.0.3",
     "wrangler": "^3.91.0"
   },
