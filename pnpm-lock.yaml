@@ -11,6 +11,9 @@ importers:
       '@nuxtjs/tailwindcss':
         specifier: 6.12.2
         version: 6.12.2(magicast@0.3.5)(rollup@4.27.4)
+      '@poupe/theme-builder':
+        specifier: ^0.2.0
+        version: 0.2.0(@material/material-color-utilities@0.3.0)(tailwindcss@3.4.15)
       nuxt:
         specifier: ^3.14.1592
         version: 3.14.1592(@parcel/watcher@2.5.0)(@types/node@22.10.1)(eslint@8.57.1)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.27.4)(terser@5.36.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.1)(terser@5.36.0))
@@ -810,6 +813,9 @@ packages:
     resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==}
     hasBin: true
 
+  '@material/material-color-utilities@0.3.0':
+    resolution: {integrity: sha512-ztmtTd6xwnuh2/xu+Vb01btgV8SQWYCaK56CkRK8gEkWe5TuDyBcYJ0wgkMRn+2VcE9KUmhvkz+N9GHrqw/C0g==}
+
   '@netlify/functions@2.8.2':
     resolution: {integrity: sha512-DeoAQh8LuNPvBE4qsKlezjKj0PyXDryOFJfJKo3Z1qZLKzQ21sT314KQKPVjfvw6knqijj+IO+0kHXy/TJiqNA==}
     engines: {node: '>=14.0.0'}
@@ -1020,6 +1026,13 @@ packages:
       eslint-config-unjs: 0.4.1
       eslint-plugin-vue: ^9.25.0
       typescript: ^5.4.5
+
+  '@poupe/theme-builder@0.2.0':
+    resolution: {integrity: sha512-ql1A3UsEiYCl2wiL+hht8Q8ByR9BMRXNFv1UyxvYZk+Fjh7Dc4/G75SO1nSnuxq2vhSGo0ruHX3p3rEcXywQ+w==}
+    engines: {node: '>= 18', pnpm: '>= 8'}
+    peerDependencies:
+      '@material/material-color-utilities': ^0.3.0
+      tailwindcss: ^3.4.15
 
   '@redocly/ajv@8.11.2':
     resolution: {integrity: sha512-io1JpnwtIcvojV7QKDUSIuMN/ikdOUd1ReEnUnMKGfDVridQZ31J0MmIuqwuRjWDZfmvr+Q0MqCcfHM2gTivOg==}
@@ -5217,6 +5230,8 @@ snapshots:
       - encoding
       - supports-color
 
+  '@material/material-color-utilities@0.3.0': {}
+
   '@netlify/functions@2.8.2':
     dependencies:
       '@netlify/serverless-functions-api': 1.26.1
@@ -5623,6 +5638,12 @@ snapshots:
       eslint-config-unjs: 0.4.1(eslint@8.57.1)(typescript@5.7.2)
       eslint-plugin-vue: 9.31.0(eslint@8.57.1)
       typescript: 5.7.2
+
+  '@poupe/theme-builder@0.2.0(@material/material-color-utilities@0.3.0)(tailwindcss@3.4.15)':
+    dependencies:
+      '@material/material-color-utilities': 0.3.0
+      tailwindcss: 3.4.15
+      type-fest: 4.29.0
 
   '@redocly/ajv@8.11.2':
     dependencies:
