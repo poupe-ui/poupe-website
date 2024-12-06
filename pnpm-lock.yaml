@@ -34,8 +34,8 @@ importers:
         specifier: 6.12.2
         version: 6.12.2(magicast@0.3.5)(rollup@4.27.4)
       '@poupe/eslint-config':
-        specifier: ^0.3.1
-        version: 0.3.1(@stylistic/eslint-plugin@2.11.0(eslint@8.57.1)(typescript@5.7.2))(@vue/eslint-config-typescript@13.0.0(eslint-plugin-vue@9.31.0(eslint@8.57.1))(eslint@8.57.1)(typescript@5.7.2))(eslint-config-unjs@0.4.1(eslint@8.57.1)(typescript@5.7.2))(eslint-plugin-vue@9.31.0(eslint@8.57.1))(eslint@8.57.1)(typescript@5.7.2)
+        specifier: ^0.4.0
+        version: 0.4.1(@stylistic/eslint-plugin@2.11.0(eslint@8.57.1)(typescript@5.7.2))(@vue/eslint-config-typescript@13.0.0(eslint-plugin-vue@9.31.0(eslint@8.57.1))(eslint@8.57.1)(typescript@5.7.2))(eslint-config-unjs@0.4.1(eslint@8.57.1)(typescript@5.7.2))(eslint-plugin-vue@9.31.0(eslint@8.57.1))(eslint@8.57.1)
       h3:
         specifier: ^1.13.0
         version: 1.13.0
@@ -1016,16 +1016,15 @@ packages:
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
-  '@poupe/eslint-config@0.3.1':
-    resolution: {integrity: sha512-2SfOzj5/i46AGsJ5Ta4K1simsn51GmPkBv5lyRneYHNdSlAo+/15HW1YpUByrtnlNeapUa2G1AHkfm9obtn4Kg==}
+  '@poupe/eslint-config@0.4.1':
+    resolution: {integrity: sha512-shlMt8wf0mmKb5GeyvJFvvK1J1rTqiHXnKu3MwBxv/DMzb7AI2hL7gmmtgt+/Xs6FUQMK5eWaPLEut3kv0PEvw==}
     engines: {node: '>= 18', pnpm: '>= 8'}
     peerDependencies:
-      '@stylistic/eslint-plugin': ^1.8.0
-      '@vue/eslint-config-typescript': ^13.0.0
-      eslint: ^8.57.0
-      eslint-config-unjs: 0.4.1
-      eslint-plugin-vue: ^9.25.0
-      typescript: ^5.4.5
+      '@stylistic/eslint-plugin': ^2.11.0
+      '@vue/eslint-config-typescript': ^14.1.4
+      eslint: ^9.15.0
+      eslint-config-unjs: 0.4.2
+      eslint-plugin-vue: ^9.31.0
 
   '@poupe/theme-builder@0.2.2':
     resolution: {integrity: sha512-OqFZRQRdxXjiJnD00kiG92Ayx3UWbONqbW3jbsuyOpjvyF4gk74FYmFwNjrcpNO2GNi7Tsk6BVdNorvveGdH6Q==}
@@ -5630,14 +5629,13 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@poupe/eslint-config@0.3.1(@stylistic/eslint-plugin@2.11.0(eslint@8.57.1)(typescript@5.7.2))(@vue/eslint-config-typescript@13.0.0(eslint-plugin-vue@9.31.0(eslint@8.57.1))(eslint@8.57.1)(typescript@5.7.2))(eslint-config-unjs@0.4.1(eslint@8.57.1)(typescript@5.7.2))(eslint-plugin-vue@9.31.0(eslint@8.57.1))(eslint@8.57.1)(typescript@5.7.2)':
+  '@poupe/eslint-config@0.4.1(@stylistic/eslint-plugin@2.11.0(eslint@8.57.1)(typescript@5.7.2))(@vue/eslint-config-typescript@13.0.0(eslint-plugin-vue@9.31.0(eslint@8.57.1))(eslint@8.57.1)(typescript@5.7.2))(eslint-config-unjs@0.4.1(eslint@8.57.1)(typescript@5.7.2))(eslint-plugin-vue@9.31.0(eslint@8.57.1))(eslint@8.57.1)':
     dependencies:
       '@stylistic/eslint-plugin': 2.11.0(eslint@8.57.1)(typescript@5.7.2)
       '@vue/eslint-config-typescript': 13.0.0(eslint-plugin-vue@9.31.0(eslint@8.57.1))(eslint@8.57.1)(typescript@5.7.2)
       eslint: 8.57.1
       eslint-config-unjs: 0.4.1(eslint@8.57.1)(typescript@5.7.2)
       eslint-plugin-vue: 9.31.0(eslint@8.57.1)
-      typescript: 5.7.2
 
   '@poupe/theme-builder@0.2.2(@material/material-color-utilities@0.3.0)(tailwindcss@3.4.15)':
     dependencies:
