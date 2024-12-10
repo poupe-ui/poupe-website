@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
     'nitro-cloudflare-dev',
+    'nuxt-svgo',
   ],
 
   devtools: { enabled: !isProduction },
