@@ -1,4 +1,3 @@
-import type { Config } from 'tailwindcss';
 import { withMaterialColors } from '@poupe/theme-builder/tailwind';
 
 // colours from darvaza's logo
