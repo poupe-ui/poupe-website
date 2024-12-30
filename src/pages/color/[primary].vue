@@ -10,7 +10,7 @@ let primary: Hct;
 
 try {
   primary = useHctColor($primary);
-} catch(error) {
+} catch (error) {
   throw createError({
     statusCode: 404,
     statusMessage: `Unrecognized Color ${$primary}`,
@@ -21,10 +21,10 @@ try {
 const hexPrimary = hexFromHct(primary);
 
 useHead({
-  title: `${hexPrimary} — @poupe/theme-builder` ,
+  title: `${hexPrimary} — @poupe/theme-builder`,
   meta: [{
     name: 'theme-color',
     content: hexPrimary,
   }],
-})
+});
 </script>

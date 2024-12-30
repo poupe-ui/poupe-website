@@ -2,8 +2,8 @@ import uniqolor from 'uniqolor';
 
 import {
   type Color,
+  type Hct,
   type HexColor,
-  Hct,
 
   hct,
 } from '@poupe/theme-builder/core';
@@ -16,6 +16,6 @@ export {
   hct,
 } from '@poupe/theme-builder/core';
 
-export const useRandomHexColor = () => uniqolor.random().color as HexColor
+export const useRandomHexColor = () => uniqolor.random().color as HexColor;
 
-export const useHctColor = (color: Color = useRandomHexColor()): Hct => hct(color)
+export const useHctColor = (color: Color = useRandomHexColor()): Hct => hct(color);
