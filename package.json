@@ -12,8 +12,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@poupe/theme-builder": "^0.2.5",
-    "nuxt": "^3.14.1592",
+    "@poupe/theme-builder": "^0.2.6",
+    "nuxt": "^3.15.0",
     "uniqolor": "^1.1.1",
     "vue": "latest",
     "vue-router": "latest"
