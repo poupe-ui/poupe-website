@@ -1,8 +1,6 @@
 import uniqolor from 'uniqolor';
 
 import {
-  type Color,
-  type Hct,
   type HexColor,
 
   hct,
@@ -18,4 +16,11 @@ export {
 
 export const useRandomHexColor = () => uniqolor.random().color as HexColor;
 
-export const useHctColor = (color: Color = useRandomHexColor()): Hct => hct(color);
+// useHctColor attempts to convert an string to Hct.
+export const useHctColor = (value: string = useRandomHexColor()) => {
+  try {
+    return hct(value);
+  } catch {
+    return undefined;
+  }
+};
