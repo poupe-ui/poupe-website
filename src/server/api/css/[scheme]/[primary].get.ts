@@ -1,20 +1,11 @@
-import type {
-  H3Event,
-  EventHandlerRequest,
-} from 'h3';
-
-import type {
-  CSSRuleObject,
-} from 'tailwindcss/types/config';
-
 import {
-  rgbFromHct,
-} from '@poupe/theme-builder/core';
+  type CSSRuleObject,
+  type Hct,
+  type StandardDynamicSchemeKey,
 
-import type {
-  Hct,
-  StandardDynamicSchemeKey,
-} from '~/composables/useColor';
+  rgbFromHct,
+  formatCSSRuleObjects,
+} from '@poupe/theme-builder';
 
 interface ThemeOptions {
   primary: Hct;
@@ -30,11 +21,11 @@ function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptio
   };
 
   setResponseHeaders(event, {
-    'content-type': 'text/plain; charset=utf-8',
+    'content-type': 'text/css; charset=utf-8',
     'cache-control': 'no-cache',
   });
 
-  return JSON.stringify(theme);
+  return formatCSSRuleObjects(theme);
 };
 
 export default defineEventHandler((e) => {
