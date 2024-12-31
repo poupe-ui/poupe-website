@@ -9,4 +9,6 @@ export default withMaterialColors({}, {
   primary,
   secondary,
   tertiary,
+}, {
+  omitPrintException: true,
 });
