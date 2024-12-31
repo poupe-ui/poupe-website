@@ -2,17 +2,21 @@ import uniqolor from 'uniqolor';
 
 import {
   type HexColor,
+  type StandardDynamicSchemeKey,
 
   hct,
-} from '@poupe/theme-builder/core';
+
+  standardDynamicSchemes,
+} from '@poupe/theme-builder';
 
 export {
+  type StandardDynamicSchemeKey,
   Hct,
 
   hexFromHct,
   rgbFromHct,
   hct,
-} from '@poupe/theme-builder/core';
+} from '@poupe/theme-builder';
 
 export const useRandomHexColor = () => uniqolor.random().color as HexColor;
 
@@ -23,4 +27,12 @@ export const useHctColor = (value: string = useRandomHexColor()) => {
   } catch {
     return undefined;
   }
+};
+
+// useThemeScheme attempts to convert an string to a StandardDynamicSchemeKey.
+export const useThemeScheme = (value: string) => {
+  if (value in standardDynamicSchemes) {
+    return value as StandardDynamicSchemeKey;
+  }
+  return undefined;
 };
