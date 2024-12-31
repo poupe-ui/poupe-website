@@ -14,7 +14,6 @@ export {
   Hct,
 
   hexFromHct,
-  rgbFromHct,
   hct,
 } from '@poupe/theme-builder';
 
