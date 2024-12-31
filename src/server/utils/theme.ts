@@ -25,8 +25,8 @@ export function hctToURL(c?: Hct) {
 }
 
 export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {
-  fallback?: StandardDynamicSchemeKey,
-  decode?: boolean,
+  fallback?: StandardDynamicSchemeKey;
+  decode?: boolean;
 } = {}) {
   const s = getRouterParam(event, param, opts);
   let out: typeof opts.fallback;
@@ -39,8 +39,8 @@ export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, 
 }
 
 export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {
-  fallback?: Hct,
-  decode?: boolean,
+  fallback?: Hct;
+  decode?: boolean;
 } = {}) {
   const s = getRouterParam(event, param, opts);
   let out: typeof opts.fallback;
