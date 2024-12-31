@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@poupe/theme-builder':
-        specifier: ^0.2.6
-        version: 0.2.6
+        specifier: ^0.2.7
+        version: 0.2.7
       nuxt:
         specifier: ^3.15.0
         version: 3.15.0(@parcel/watcher@2.5.0)(@types/node@22.10.2)(db0@0.2.1)(eslint@9.17.0(jiti@2.4.2))(ioredis@5.4.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.29.1)(terser@5.37.0)(typescript@5.7.2)(vite@6.0.6(@types/node@22.10.2)(jiti@2.4.2)(terser@5.37.0)(yaml@2.6.1))(yaml@2.6.1)
@@ -1054,8 +1054,8 @@ packages:
     resolution: {integrity: sha512-WH3SyJNbvcR0qY0VrSqxEOgBS/xfQcVTVH0NlGt1CSLrCddlGbPDrh3FCm8YHZxzdLYXq+zWMm/b5NDlQWtVUw==}
     engines: {node: '>= 18', pnpm: '>= 8'}
 
-  '@poupe/theme-builder@0.2.6':
-    resolution: {integrity: sha512-eDrIseWtsmB0AubV6pjRQAtKuow5pj947M18paB2cQmbV/SdpbRaalsOXIDMwKl0HPCogudpRN4a/5vjrIVggw==}
+  '@poupe/theme-builder@0.2.7':
+    resolution: {integrity: sha512-yAU8uq0Qp9UmeQtxUXigRbomu6f7J1YaNeLxF+pcVBMXL1ywwfnOBOvyOmmhS4YCnCyonGFnNlwIkl3vpbDgTA==}
     engines: {node: '>= 18', pnpm: '>= 8'}
 
   '@redocly/ajv@8.11.2':
@@ -5573,7 +5573,7 @@ snapshots:
       - jiti
       - supports-color
 
-  '@poupe/theme-builder@0.2.6':
+  '@poupe/theme-builder@0.2.7':
     dependencies:
       '@material/material-color-utilities': 0.3.0
       tailwindcss: 3.4.17
