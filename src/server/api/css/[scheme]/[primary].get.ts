@@ -3,8 +3,8 @@ import {
   type Hct,
   type StandardDynamicSchemeKey,
 
-  rgbFromHct,
   formatCSSRuleObjects,
+  makeCSSColors,
 } from '@poupe/theme-builder';
 
 interface ThemeOptions {
@@ -13,10 +13,21 @@ interface ThemeOptions {
 }
 
 function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptions) {
-  const theme: CSSRuleObject = {
-    '.root': {
-      '--md-primary': rgbFromHct(opt.primary),
-      '--md-scheme': opt.scheme,
+  const theme = makeCSSColors(opt.primary, {}, opt.scheme, 0, {
+    lightSuffix: '',
+    darkSuffix: '',
+  });
+
+  const rules: CSSRuleObject = {
+    ':root, .light': {
+      ...theme.lightValues,
+      ...theme.lightVars,
+    },
+    '@media not print': {
+      '.dark': {
+        ...theme.darkValues,
+        ...theme.darkVars,
+      },
     },
   };
 
@@ -25,7 +36,7 @@ function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptio
     'cache-control': 'no-cache',
   });
 
-  return formatCSSRuleObjects(theme);
+  return formatCSSRuleObjects(rules);
 };
 
 export default defineEventHandler((e) => {
