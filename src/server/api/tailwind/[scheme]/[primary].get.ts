@@ -38,7 +38,7 @@ function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptio
 
   setResponseHeaders(event, {
     'content-type': 'text/css; charset=utf-8',
-    'cache-control': 'no-cache',
+    'cache-control': 'max-age=86400', // 24 hours
   });
 
   return formatCSSRuleObjects(rules);
