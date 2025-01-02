@@ -4,7 +4,7 @@ import {
   type StandardDynamicSchemeKey,
 
   formatCSSRuleObjects,
-  makeCSSColors,
+  makeCSSTheme,
 } from '@poupe/theme-builder';
 
 import {
@@ -17,7 +17,10 @@ interface ThemeOptions {
 }
 
 function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptions) {
-  const theme = makeCSSColors(opt.primary, {}, opt.scheme, 0, {
+  const theme = makeCSSTheme({
+    primary: opt.primary,
+  }, {
+    scheme: opt.scheme,
     lightSuffix: '',
     darkSuffix: '',
     stringify: rgbFromHct,
