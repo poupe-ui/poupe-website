@@ -5,10 +5,6 @@ import {
 
   formatCSSRuleObjects,
   makeCSSTheme,
-} from '@poupe/theme-builder';
-
-import {
-  rgbFromHct,
 } from '@poupe/theme-builder/tailwind';
 
 interface ThemeOptions {
@@ -23,7 +19,6 @@ function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptio
     scheme: opt.scheme,
     lightSuffix: '',
     darkSuffix: '',
-    stringify: rgbFromHct,
   });
 
   const rules: CSSRuleObject = {
