@@ -4,11 +4,7 @@ import {
   type StandardDynamicSchemeKey,
 
   formatCSSRuleObjects,
-  makeCSSColors,
-} from '@poupe/theme-builder';
-
-import {
-  rgbFromHct,
+  makeCSSTheme,
 } from '@poupe/theme-builder/tailwind';
 
 interface ThemeOptions {
@@ -17,10 +13,12 @@ interface ThemeOptions {
 }
 
 function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptions) {
-  const theme = makeCSSColors(opt.primary, {}, opt.scheme, 0, {
+  const theme = makeCSSTheme({
+    primary: opt.primary,
+  }, {
+    scheme: opt.scheme,
     lightSuffix: '',
     darkSuffix: '',
-    stringify: rgbFromHct,
   });
 
   const rules: CSSRuleObject = {
