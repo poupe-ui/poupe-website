@@ -12,7 +12,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@poupe/theme-builder": "^0.3.1",
+    "@poupe/theme-builder": "^0.3.2",
     "nuxt": "^3.15.0",
     "uniqolor": "^1.1.1",
     "vue": "latest",
@@ -23,7 +23,7 @@
     "@nuxt/eslint": "^0.7.4",
     "@nuxt/eslint-config": "^0.7.4",
     "@nuxtjs/tailwindcss": "6.12.2",
-    "@poupe/eslint-config": "^0.4.5",
+    "@poupe/eslint-config": "^0.4.9",
     "eslint": "^9.17.0",
     "h3": "^1.13.0",
     "nitro-cloudflare-dev": "^0.2.1",
