@@ -10,15 +10,15 @@ import {
   useHctColor,
   useRandomHexColor,
   useThemeScheme,
-} from '~/composables/useColor';
+} from '~/composables/use-color';
 
 export function hctToURL(c?: Hct) {
   if (c === undefined) {
-    return useRandomHexColor().substring(1);
+    return useRandomHexColor().slice(1);
   }
 
   if (c instanceof Hct) {
-    return hexFromHct(c).substring(1);
+    return hexFromHct(c).slice(1);
   }
 
   return undefined;
@@ -35,7 +35,7 @@ export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, 
     out = useThemeScheme(s);
   }
 
-  return out !== undefined ? out : opts.fallback;
+  return out === undefined ? opts.fallback : out;
 }
 
 export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {
@@ -49,5 +49,5 @@ export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, p
     out = useHctColor(s);
   }
 
-  return out !== undefined ? out : opts.fallback;
+  return out === undefined ? opts.fallback : out;
 }
