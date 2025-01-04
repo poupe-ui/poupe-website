@@ -24,7 +24,7 @@ export const useHctColor = (value: string = useRandomHexColor()) => {
   try {
     return hct(value);
   } catch {
-    return undefined;
+    return;
   }
 };
 
@@ -33,5 +33,5 @@ export const useThemeScheme = (value: string) => {
   if (value in standardDynamicSchemes) {
     return value as StandardDynamicSchemeKey;
   }
-  return undefined;
+  return;
 };

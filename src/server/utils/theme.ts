@@ -10,44 +10,44 @@ import {
   useHctColor,
   useRandomHexColor,
   useThemeScheme,
-} from '~/composables/useColor';
+} from '~/composables/use-color';
 
 export function hctToURL(c?: Hct) {
   if (c === undefined) {
-    return useRandomHexColor().substring(1);
+    return useRandomHexColor().slice(1);
   }
 
   if (c instanceof Hct) {
-    return hexFromHct(c).substring(1);
+    return hexFromHct(c).slice(1);
   }
 
-  return undefined;
+  return;
 }
 
-export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {
+export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, options: {
   fallback?: StandardDynamicSchemeKey;
   decode?: boolean;
 } = {}) {
-  const s = getRouterParam(event, param, opts);
-  let out: typeof opts.fallback;
+  const s = getRouterParam(event, param, options);
+  let out: typeof options.fallback;
 
   if (s !== undefined) {
     out = useThemeScheme(s);
   }
 
-  return out !== undefined ? out : opts.fallback;
+  return out === undefined ? options.fallback : out;
 }
 
-export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {
+export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, options: {
   fallback?: Hct;
   decode?: boolean;
 } = {}) {
-  const s = getRouterParam(event, param, opts);
-  let out: typeof opts.fallback;
+  const s = getRouterParam(event, param, options);
+  let out: typeof options.fallback;
 
   if (s !== undefined) {
     out = useHctColor(s);
   }
 
-  return out !== undefined ? out : opts.fallback;
+  return out === undefined ? options.fallback : out;
 }

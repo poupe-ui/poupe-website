@@ -16,11 +16,26 @@ export default withNuxt(
             env: {
               environment: false,
             },
+            errMsg: {
+              errorMessages: false,
+            },
             fn: {
               function: false,
             },
+            i: {
+              index: false,
+            },
+            param: {
+              parameter: false,
+            },
+            params: {
+              parameters: false,
+            },
             prop: {
               property: false,
+            },
+            props: {
+              properties: false,
             },
             vars: {
               variables: false,

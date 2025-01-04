@@ -42,31 +42,31 @@ function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptio
   return formatCSSRuleObjects(rules);
 };
 
-export default defineEventHandler((e) => {
+export default defineEventHandler((event) => {
   const opt: Partial<ThemeOptions> = {
-    primary: themeColorFromRouterParam(e, 'primary'),
-    scheme: themeSchemeFromRouterParam(e, 'scheme'),
+    primary: themeColorFromRouterParam(event, 'primary'),
+    scheme: themeSchemeFromRouterParam(event, 'scheme'),
   };
 
-  const errMsg = new Array<string>();
+  const errorMessage = new Array<string>();
 
   if (opt.scheme === undefined) {
-    errMsg.push('invalid scheme');
+    errorMessage.push('invalid scheme');
   }
 
   if (opt.primary === undefined) {
-    errMsg.push('invalid primary color');
+    errorMessage.push('invalid primary color');
   }
 
-  if (errMsg.length > 0) {
-    setResponseStatus(e, 400);
-    setResponseHeaders(e, {
+  if (errorMessage.length > 0) {
+    setResponseStatus(event, 400);
+    setResponseHeaders(event, {
       'content-type': 'text/plain; charset=utf-8',
       'cache-control': 'no-cache',
     });
 
-    return errMsg.join('\n');
+    return errorMessage.join('\n');
   }
 
-  return handleThemeRequest(e, opt as ThemeOptions);
+  return handleThemeRequest(event, opt as ThemeOptions);
 });
