@@ -42,10 +42,10 @@ function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptio
   return formatCSSRuleObjects(rules);
 };
 
-export default defineEventHandler((e) => {
+export default defineEventHandler((event) => {
   const opt: Partial<ThemeOptions> = {
-    primary: themeColorFromRouterParam(e, 'primary'),
-    scheme: themeSchemeFromRouterParam(e, 'scheme'),
+    primary: themeColorFromRouterParam(event, 'primary'),
+    scheme: themeSchemeFromRouterParam(event, 'scheme'),
   };
 
   const errMsg = new Array<string>();
@@ -59,8 +59,8 @@ export default defineEventHandler((e) => {
   }
 
   if (errMsg.length > 0) {
-    setResponseStatus(e, 400);
-    setResponseHeaders(e, {
+    setResponseStatus(event, 400);
+    setResponseHeaders(event, {
       'content-type': 'text/plain; charset=utf-8',
       'cache-control': 'no-cache',
     });
@@ -68,5 +68,5 @@ export default defineEventHandler((e) => {
     return errMsg.join('\n');
   }
 
-  return handleThemeRequest(e, opt as ThemeOptions);
+  return handleThemeRequest(event, opt as ThemeOptions);
 });
