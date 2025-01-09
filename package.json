@@ -19,7 +19,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241230.0",
+    "@cloudflare/workers-types": "^4.20250109.0",
     "@nuxt/eslint": "^0.7.5",
     "@nuxt/eslint-config": "^0.7.5",
     "@nuxtjs/tailwindcss": "6.12.2",
