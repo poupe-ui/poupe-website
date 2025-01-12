@@ -23,6 +23,11 @@ export default defineNuxtConfig({
 
   srcDir: 'src',
   serverDir: 'src/server',
+
+  experimental: {
+    appManifest: false,
+  },
+
   compatibilityDate: '2024-11-01',
 
   nitro: {
