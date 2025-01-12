@@ -9,6 +9,8 @@
     </h1>
     <div class="flex">
       <div
+        role="region"
+        aria-label="Color Shades"
         class="grid p-2 shadow-md shadow-shadow"
         :style="`background-color:${hexColor}`"
       >
@@ -20,6 +22,7 @@
             v-if="shade !== 'DEFAULT'"
             class="inline-block h-10 w-20 text-center align-middle"
             :style="`background-color:${hexShade}`"
+            :aria-label="`Color shade ${shade}`"
           >{{ shade }}
           </span>
         </div>
