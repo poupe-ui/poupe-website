@@ -18,13 +18,19 @@
           v-for="(hexShade, shade) in shades"
           :key="shade"
         >
-          <span
+          <div
             v-if="shade !== 'DEFAULT'"
-            class="inline-block h-10 w-20 text-center align-middle"
-            :style="`background-color:${hexShade}`"
-            :aria-label="`Color shade ${shade}`"
-          >{{ shade }}
-          </span>
+            class="grid grid-cols-2"
+          >
+            <div class="font-mono text-end align-middle p-2">
+              {{ shade }}
+            </div>
+            <div
+              class="block h-10 w-20"
+              :style="`background-color:${hexShade}`"
+              :aria-label="`Color shade ${shade}`"
+            />
+          </div>
         </div>
       </div>
     </div>
