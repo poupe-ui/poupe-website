@@ -7,21 +7,25 @@
       >🮆</span>
       !
     </h1>
-    <div class="flex flex-col gap-1">
+    <div class="flex">
       <div
-        v-for="(hexShade, shade) of shades"
-        :key="shade"
-        class="rounded-md border-[1px] border-primary m-1 p-2 shadow-sm shadow-primary bg-container text-on-container"
+        role="region"
+        aria-label="Color Shades"
+        class="grid p-2 shadow-md shadow-shadow"
+        :style="`background-color:${hexColor}`"
       >
-        <span class="font-mono">
-          {{ shade }}
-        </span>
-        :
-        <span class="font-mono">{{ hexShade }}</span>
-        &nbsp;
-        <span
-          :style="`color:${hexShade}`"
-        >🮆</span>
+        <div
+          v-for="(hexShade, shade) in shades"
+          :key="shade"
+        >
+          <span
+            v-if="shade !== 'DEFAULT'"
+            class="inline-block h-10 w-20 text-center align-middle"
+            :style="`background-color:${hexShade}`"
+            :aria-label="`Color shade ${shade}`"
+          >{{ shade }}
+          </span>
+        </div>
       </div>
     </div>
   </div>
