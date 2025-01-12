@@ -1,11 +1,7 @@
 <template>
   <div class="m-2 p-2 rounded border border-primary shadow-xl bg-primary-container text-on-primary-container">
     <h1 class="p-2 text-2xl font-bold">
-      Hello, {{ hexColor }}
-      <span
-        :style="`color:${hexColor}`"
-      >🮆</span>
-      !
+      Hello, {{ hexColor }}!
     </h1>
     <div class="flex">
       <div
