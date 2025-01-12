@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { trimPath } from '~/server/utils/path';
+
 const hex = useRandomHexColor();
-await navigateTo(`${useRoute().path}/${hex.slice(1)}`);
+const path = trimPath(useRoute().path);
+await navigateTo(`${path}/${hex.slice(1)}`);
 </script>
 
 <template>
