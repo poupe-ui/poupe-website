@@ -5,16 +5,24 @@
 </template>
 
 <script setup lang="ts">
-const $primary = useRoute().params.primary;
-let primary: Hct;
+function getParamPrimary(): string {
+  const p = useRoute().params.primary;
+  if (!Array.isArray(p))
+    return p;
+  else if (p.length > 0)
+    return p[0];
+  else
+    return '';
+}
 
-try {
-  primary = useHctColor($primary);
-} catch (error) {
+const $primary = getParamPrimary();
+const primary = useHctColor($primary);
+
+if (primary === undefined) {
   throw createError({
     statusCode: 404,
-    statusMessage: `Unrecognized Color ${$primary}`,
-    cause: error,
+    statusMessage: `Unrecognized Color #${$primary}`,
+    cause: `params:${useRoute().params}`,
   });
 }
 
