@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@poupe/theme-builder':
-        specifier: ^0.4.5
-        version: 0.4.5
+        specifier: ^0.4.6
+        version: 0.4.6
       nuxt:
         specifier: ^3.15.1
         version: 3.15.1(@parcel/watcher@2.5.0)(@types/node@22.10.2)(db0@0.2.1)(eslint@9.18.0(jiti@2.4.2))(ioredis@5.4.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.29.1)(terser@5.37.0)(typescript@5.7.3)(vite@6.0.7(@types/node@22.10.2)(jiti@2.4.2)(terser@5.37.0)(yaml@2.6.1))(yaml@2.6.1)
@@ -1223,9 +1223,9 @@ packages:
     resolution: {integrity: sha512-graTDvn476QuCIyHP65b48xMvg73cgy9QQp+dUfT1YhoanUvL6Yvp3+YB8+PYjkh1Sz2Zdt5NktmO5J8q8OcLw==}
     engines: {node: '>= 18.20.5', pnpm: '>= 9.15.3'}
 
-  '@poupe/theme-builder@0.4.5':
-    resolution: {integrity: sha512-UZAsJJz2hzO82XoSB2TkV5M0dgNZP1Nn/HBNtY0yokq4ZDHBAuP9h8PX3AgpLIol4fE4s8WpdHaLQ+A0hgO+Zg==}
-    engines: {node: '>= 18.20.5', pnpm: '>= 9.15.2'}
+  '@poupe/theme-builder@0.4.6':
+    resolution: {integrity: sha512-RVvyKTl++UlFLs7KwI38LGhuLGB7TF3LNo1/AecsCadKvG+czX21A0Dp/iPbuHFFYC1NXwTVKOXybn8rFTQS/w==}
+    engines: {node: '>= 18.20.5', pnpm: '>= 9.15.3'}
 
   '@redocly/ajv@8.11.2':
     resolution: {integrity: sha512-io1JpnwtIcvojV7QKDUSIuMN/ikdOUd1ReEnUnMKGfDVridQZ31J0MmIuqwuRjWDZfmvr+Q0MqCcfHM2gTivOg==}
@@ -4422,8 +4422,8 @@ packages:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
 
-  type-fest@4.31.0:
-    resolution: {integrity: sha512-yCxltHW07Nkhv/1F6wWBr8kz+5BGMfP+RbRSYFnegVb0qV/UMT0G0ElBloPVerqn4M2ZV80Ir1FtCcYv1cT6vQ==}
+  type-fest@4.32.0:
+    resolution: {integrity: sha512-rfgpoi08xagF3JSdtJlCwMq9DGNDE0IMh3Mkpc1wUypg9vPi786AiqeBBKcqvIkq42azsBM85N490fyZjeUftw==}
     engines: {node: '>=16'}
 
   type-is@1.6.18:
@@ -6479,11 +6479,11 @@ snapshots:
       - jiti
       - supports-color
 
-  '@poupe/theme-builder@0.4.5':
+  '@poupe/theme-builder@0.4.6':
     dependencies:
       '@material/material-color-utilities': 0.3.0
       tailwindcss: 3.4.17
-      type-fest: 4.31.0
+      type-fest: 4.32.0
     transitivePeerDependencies:
       - ts-node
 
@@ -7814,7 +7814,7 @@ snapshots:
 
   dot-prop@9.0.0:
     dependencies:
-      type-fest: 4.31.0
+      type-fest: 4.32.0
 
   dotenv@16.4.7: {}
 
@@ -9348,7 +9348,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.26.2
       index-to-position: 0.1.2
-      type-fest: 4.31.0
+      type-fest: 4.32.0
 
   parse-path@7.0.0:
     dependencies:
@@ -10183,7 +10183,7 @@ snapshots:
 
   type-fest@0.8.1: {}
 
-  type-fest@4.31.0: {}
+  type-fest@4.32.0: {}
 
   type-is@1.6.18:
     dependencies:
