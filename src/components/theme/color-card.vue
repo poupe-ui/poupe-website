@@ -36,9 +36,9 @@
 <script setup lang="ts">
 import { withShades } from '@poupe/theme-builder/tailwind';
 
-const $props = defineProps({
-  modelValue: Hct,
-});
+const $props = defineProps<{
+  modelValue: Hct;
+}>();
 
 const hexColor = computed(() => hexFromHct($props.modelValue));
 

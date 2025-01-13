@@ -1,35 +1,15 @@
 <template>
-  <div>
-    <theme-color-card v-model="primary" />
-  </div>
+  <theme-color-card v-model="primary" />
 </template>
 
 <script setup lang="ts">
 definePageMeta({
   layout: false,
+
+  validate: (route): boolean => isValidRouteParam('primary', isHexValue, route),
 });
 
-function getParamPrimary(): string {
-  const p = useRoute().params.primary;
-  if (!Array.isArray(p))
-    return p;
-  else if (p.length > 0)
-    return p[0];
-  else
-    return '';
-}
-
-const $primary = getParamPrimary();
-const primary = useHctColor($primary);
-
-if (primary === undefined) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: `Unrecognized Color #${$primary}`,
-    cause: `params:${useRoute().params}`,
-  });
-}
-
+const primary = useHctColor(useRoute().params.primary);
 const hexPrimary = hexFromHct(primary);
 
 useHead({
@@ -38,8 +18,7 @@ useHead({
     id: 'poupe-theme-link',
     rel: 'stylesheet',
     href: `/api/tailwindcss/content/${hexPrimary.slice(1)}`,
-    fetchPriority: 'high',
-    tagPriority: 0,
+    tagPriority: 20,
   }],
   meta: [{
     name: 'theme-color',
