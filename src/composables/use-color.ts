@@ -35,6 +35,9 @@ export const useHctColor = (value: string | string[] = useRandomHexColor()) => {
   return undefined;
 };
 
+/** @returns if the value is a valid {@link StandardDynamicSchemeKey} */
+export const isThemeSchemeKey = (s: string): boolean => s in standardDynamicSchemes;
+
 /** useThemeScheme attempts to convert an string to a {@link StandardDynamicSchemeKey}. */
 export const useThemeScheme = (value: string) => {
   if (value in standardDynamicSchemes) {
