@@ -10,7 +10,6 @@ useHead({
     id: 'poupe-theme-link',
     rel: 'stylesheet',
     href: `/api/tailwindcss/content/${primary.slice(1)}`,
-    fetchPriority: 'high',
     tagPriority: 0,
   }],
   meta: [{
