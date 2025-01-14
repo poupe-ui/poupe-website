@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     'nitro-cloudflare-dev',
     'nuxt-svgo',
+    'reka-ui/nuxt',
   ],
 
   devtools: { enabled: !isProduction },
@@ -36,5 +37,9 @@ export default defineNuxtConfig({
         semi: true,
       },
     },
+  },
+
+  reka: {
+    prefix: 'reka-',
   },
 });
