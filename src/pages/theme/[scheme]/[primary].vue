@@ -9,14 +9,16 @@
         </h1>
       </template>
 
-      <div class="flex justify-center">
-        <ul>
+      <div class="flex flex-col">
+        <ul class="flex justify-center">
           <li>
             <span class="font-bold">H</span>:{{ primary.hue.toFixed(2) }}
             <span class="font-bold">C</span>:{{ primary.chroma.toFixed(2) }}
             <span class="font-bold">T</span>:{{ primary.tone.toFixed(2) }}
           </li>
         </ul>
+
+        <theme-colors-table />
       </div>
     </theme-card>
   </div>
