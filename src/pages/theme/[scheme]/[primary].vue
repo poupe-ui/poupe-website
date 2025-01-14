@@ -1,8 +1,25 @@
 <template>
-  <theme-card
-    v-model="primary"
-    :scheme="scheme"
-  />
+  <div class="flex w-screen justify-center">
+    <theme-card>
+      <template #title>
+        <h1 class="text-2xl font-bold capitalize">
+          <span class="font-mono">{{ themeColor }}</span>
+          {{ scheme }}
+          theme
+        </h1>
+      </template>
+
+      <div class="flex justify-center">
+        <ul>
+          <li>
+            <span class="font-bold">H</span>:{{ primary.hue.toFixed(2) }}
+            <span class="font-bold">C</span>:{{ primary.chroma.toFixed(2) }}
+            <span class="font-bold">T</span>:{{ primary.tone.toFixed(2) }}
+          </li>
+        </ul>
+      </div>
+    </theme-card>
+  </div>
 </template>
 
 <script setup lang="ts">

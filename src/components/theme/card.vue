@@ -1,21 +1,23 @@
-<template>
-  <ul class="text-mono">
-    <li>scheme: {{ scheme }}</li>
-    <li>primary: {{ hexPrimary }} (H:{{ primary.hue.toFixed(2) }} C:{{ primary.chroma.toFixed(2) }} T:{{ primary.tone.toFixed(2) }})</li>
-  </ul>
-</template>
-
 <script setup lang="ts">
-import type {
-  HCT,
-  StandardDynamicSchemeKey,
-} from '@poupe/theme-builder';
-
-const $props = defineProps<{
-  modelValue: HCT;
-  scheme: StandardDynamicSchemeKey;
+defineProps<{
+  title?: string;
 }>();
-
-const primary = computed(() => $props.modelValue);
-const hexPrimary = computed(() => hexFromHCT($props.modelValue));
 </script>
+
+<template>
+  <div class="m-2 p-2 rounded border-primary border shadow-shadow shadow-md bg-primary-container text-on-primary-container">
+    <div class="flex justify-between items-center">
+      <slot name="title">
+        <h1
+          v-if="title"
+          class="text-2xl font-bold"
+        >
+          {{ title }}
+        </h1>
+      </slot>
+      <toggle-dark class="ms-2" />
+    </div>
+
+    <slot />
+  </div>
+</template>

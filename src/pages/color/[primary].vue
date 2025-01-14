@@ -1,5 +1,11 @@
 <template>
-  <theme-color-card v-model="primary" />
+  <div class="flex w-screen justify-center">
+    <theme-card :title="`Hello, ${themeColor}`">
+      <div class="flex justify-center">
+        <theme-shades-bar v-model="primary" />
+      </div>
+    </theme-card>
+  </div>
 </template>
 
 <script setup lang="ts">
