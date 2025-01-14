@@ -25,6 +25,9 @@ export const isHexValue = (s: string | HexColor): boolean => reHexValue.test(s);
 /** @returns a random color in {@link HexColor} format */
 export const useRandomHexColor = () => uniqolor.random().color as HexColor;
 
+/** @returns a random color as {@link HCT} object */
+export const useRandomColor = () => hct(useRandomHexColor());
+
 /** useHCTColor attempts to convert an string to HCT */
 export const useHCTColor = (value: string | string[] = useRandomHexColor()) => {
   if (!Array.isArray(value))
