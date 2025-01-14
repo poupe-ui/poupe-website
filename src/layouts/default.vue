@@ -4,8 +4,7 @@
 
 <script setup lang="ts">
 const primary = '#caae88';
-
-const isDark = useDark();
+const { darkMode } = useUserSettings();
 
 useHead({
   link: [{
@@ -22,7 +21,7 @@ useHead({
     class: 'bg-surface text-on-surface',
   },
   htmlAttrs: {
-    class: isDark.value ? 'dark' : '',
+    class: darkMode ? 'dark' : '',
   },
 });
 </script>

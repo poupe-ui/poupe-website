@@ -11,8 +11,7 @@ definePageMeta({
 
 const primary = useHCTColor(useRoute().params.primary) || useRandomColor();
 const hexPrimary = hexFromHCT(primary);
-
-const isDark = useDark();
+const { darkMode } = useUserSettings();
 
 useHead({
   title: `${hexPrimary} — @poupe/theme-builder`,
@@ -30,7 +29,7 @@ useHead({
     class: 'bg-surface text-on-surface',
   },
   htmlAttrs: {
-    class: isDark.value ? 'dark' : '',
+    class: darkMode ? 'dark' : '',
   },
 });
 </script>

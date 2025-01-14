@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
+    '@pinia/nuxt',
     'nitro-cloudflare-dev',
     'nuxt-svgo',
     'reka-ui/nuxt',
