@@ -19,7 +19,7 @@ const scheme = useThemeScheme($route.params.scheme) || 'vibrant';
 const primary = useHCTColor($route.params.primary) || useRandomColor();
 const hexPrimary = hexFromHCT(primary);
 
-const isDark = useDark();
+const { darkMode } = useUserSettings();
 
 useHead({
   title: `${scheme}:${hexPrimary} — @poupe/theme-builder`,
@@ -37,7 +37,7 @@ useHead({
     class: 'bg-surface text-on-surface',
   },
   htmlAttrs: {
-    class: isDark.value ? 'dark' : '',
+    class: darkMode ? 'dark' : '',
   },
 });
 </script>
