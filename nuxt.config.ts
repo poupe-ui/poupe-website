@@ -12,6 +12,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/icon',
     '@pinia/nuxt',
     'nitro-cloudflare-dev',
     'nuxt-svgo',
