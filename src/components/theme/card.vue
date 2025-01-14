@@ -6,9 +6,9 @@
 </template>
 
 <script setup lang="ts">
-import {
-  type HCT,
-  type StandardDynamicSchemeKey,
+import type {
+  HCT,
+  StandardDynamicSchemeKey,
 } from '@poupe/theme-builder';
 
 const $props = defineProps<{
@@ -17,5 +17,5 @@ const $props = defineProps<{
 }>();
 
 const primary = computed(() => $props.modelValue);
-const hexPrimary = computed(() => hexFromHCT(primary.value));
+const hexPrimary = computed(() => hexFromHCT($props.modelValue));
 </script>
