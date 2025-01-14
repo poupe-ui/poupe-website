@@ -38,7 +38,7 @@ export const useHCTColor = (value: string | string[] = useRandomHexColor()) => {
 export const isThemeSchemeKey = (s: string): boolean => s in standardDynamicSchemes;
 
 /** useThemeScheme attempts to convert an string to a {@link StandardDynamicSchemeKey}. */
-export const useThemeScheme = (value: string|string[]) => {
+export const useThemeScheme = (value: string | string[]) => {
   const key = Array.isArray(value) ? value[0] : value;
   if (key in standardDynamicSchemes) {
     return key as StandardDynamicSchemeKey;
