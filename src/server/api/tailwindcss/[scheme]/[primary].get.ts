@@ -1,6 +1,6 @@
 import {
   type CSSRuleObject,
-  type Hct,
+  type HCT,
   type StandardDynamicSchemeKey,
 
   formatCSSRuleObjects,
@@ -8,7 +8,7 @@ import {
 } from '@poupe/theme-builder/tailwind';
 
 interface ThemeOptions {
-  primary: Hct;
+  primary: HCT;
   scheme: StandardDynamicSchemeKey;
 }
 

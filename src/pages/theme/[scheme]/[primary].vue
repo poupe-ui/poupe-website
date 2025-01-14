@@ -16,8 +16,8 @@ definePageMeta({
 
 const $route = useRoute();
 const scheme = useThemeScheme($route.params.scheme);
-const primary = useHctColor($route.params.primary);
-const hexPrimary = hexFromHct(primary);
+const primary = useHCTColor($route.params.primary);
+const hexPrimary = hexFromHCT(primary);
 
 useHead({
   title: `${scheme}:${hexPrimary} — @poupe/theme-builder`,

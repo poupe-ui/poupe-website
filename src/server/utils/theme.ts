@@ -1,24 +1,24 @@
 import {
-  Hct,
+  HCT,
 
-  hexFromHct,
+  hexFromHCT,
 } from '@poupe/theme-builder/core';
 
 import {
   type StandardDynamicSchemeKey,
 
-  useHctColor,
+  useHCTColor,
   useRandomHexColor,
   useThemeScheme,
 } from '~/composables/use-color';
 
-export function hctToURL(c?: Hct) {
+export function hctToURL(c?: HCT) {
   if (c === undefined) {
     return useRandomHexColor().slice(1);
   }
 
-  if (c instanceof Hct) {
-    return hexFromHct(c).slice(1);
+  if (c instanceof HCT) {
+    return hexFromHCT(c).slice(1);
   }
 
   return undefined;
@@ -39,14 +39,14 @@ export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, 
 }
 
 export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {
-  fallback?: Hct;
+  fallback?: HCT;
   decode?: boolean;
 } = {}) {
   const s = getRouterParam(event, param, opts);
   let out: typeof opts.fallback;
 
   if (s !== undefined) {
-    out = useHctColor(s);
+    out = useHCTColor(s);
   }
 
   return out === undefined ? opts.fallback : out;
