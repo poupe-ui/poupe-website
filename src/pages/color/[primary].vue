@@ -1,35 +1,35 @@
 <template>
-  <theme-color-card v-model="primary" />
+  <div class="flex w-screen justify-center">
+    <theme-card :title="`Hello, ${themeColor}`">
+      <div class="flex justify-center">
+        <theme-shades-bar v-model="primary" />
+      </div>
+    </theme-card>
+  </div>
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-  layout: false,
+  layout: 'themeless',
 
   validate: (route): boolean => isValidRouteParam('primary', isHexValue, route),
 });
 
 const primary = useHCTColor(useRoute().params.primary) || useRandomColor();
-const hexPrimary = hexFromHCT(primary);
-const { darkMode } = useUserSettings();
+const themeColor = hexFromHCT(primary);
+const themeURL = computed(() => `/api/tailwindcss/content/${themeColor.slice(1)}`);
 
 useHead({
-  title: `${hexPrimary} — @poupe/theme-builder`,
+  title: `${themeColor} — @poupe/theme-builder`,
   link: [{
     id: 'poupe-theme-link',
     rel: 'stylesheet',
-    href: `/api/tailwindcss/content/${hexPrimary.slice(1)}`,
+    href: themeURL,
     tagPriority: 20,
   }],
   meta: [{
     name: 'theme-color',
-    content: hexPrimary,
+    content: themeColor,
   }],
-  bodyAttrs: {
-    class: 'bg-surface text-on-surface',
-  },
-  htmlAttrs: {
-    class: darkMode ? 'dark' : '',
-  },
 });
 </script>

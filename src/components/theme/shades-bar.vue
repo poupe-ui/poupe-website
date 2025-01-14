@@ -1,0 +1,32 @@
+<template>
+  <div
+    class="flex"
+    role="region"
+    :aria-label="`${hexColor} Color Shades`"
+  >
+    <div
+      v-for="(hexShade, shade) in shades"
+      :key="shade"
+    >
+      <div
+        v-if="shade !== 'DEFAULT'"
+        class="h-10 w-10"
+        :style="`background-color:${hexShade}`"
+      />
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import {
+  type HCT,
+
+  withShades,
+} from '@poupe/theme-builder/tailwind';
+
+const props = defineProps<{
+  modelValue: HCT;
+}>();
+const hexColor = computed(() => hexFromHCT(props.modelValue));
+const shades = computed(() => withShades(props.modelValue));
+</script>
