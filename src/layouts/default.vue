@@ -5,6 +5,8 @@
 <script setup lang="ts">
 const primary = '#caae88';
 
+const isDark = useDark();
+
 useHead({
   link: [{
     id: 'poupe-theme-link',
@@ -18,6 +20,9 @@ useHead({
   }],
   bodyAttrs: {
     class: 'bg-surface text-on-surface',
+  },
+  htmlAttrs: {
+    class: isDark.value ? 'dark' : '',
   },
 });
 </script>

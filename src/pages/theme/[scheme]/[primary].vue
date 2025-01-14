@@ -19,6 +19,8 @@ const scheme = useThemeScheme($route.params.scheme);
 const primary = useHCTColor($route.params.primary);
 const hexPrimary = hexFromHCT(primary);
 
+const isDark = useDark();
+
 useHead({
   title: `${scheme}:${hexPrimary} — @poupe/theme-builder`,
   link: [{
@@ -33,6 +35,9 @@ useHead({
   }],
   bodyAttrs: {
     class: 'bg-surface text-on-surface',
+  },
+  htmlAttrs: {
+    class: isDark.value ? 'dark' : '',
   },
 });
 </script>

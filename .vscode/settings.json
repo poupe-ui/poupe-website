@@ -3,6 +3,7 @@
     "darvaza",
     "nuxt",
     "poupe",
-    "uniqolor"
+    "uniqolor",
+    "vueuse"
   ]
 }

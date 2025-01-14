@@ -12,6 +12,8 @@ definePageMeta({
 const primary = useHCTColor(useRoute().params.primary);
 const hexPrimary = hexFromHCT(primary);
 
+const isDark = useDark();
+
 useHead({
   title: `${hexPrimary} — @poupe/theme-builder`,
   link: [{
@@ -26,6 +28,9 @@ useHead({
   }],
   bodyAttrs: {
     class: 'bg-surface text-on-surface',
+  },
+  htmlAttrs: {
+    class: isDark.value ? 'dark' : '',
   },
 });
 </script>
