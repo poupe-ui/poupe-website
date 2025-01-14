@@ -1,9 +1,12 @@
 <template>
-  <NuxtPage />
+  <NuxtLayout name="themeless">
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-const { darkMode, themeColor } = useTheme();
+const { themeColor } = useTheme();
+
 const themeURL = computed(() => `/api/tailwindcss/content/${themeColor.value.slice(1)}`);
 
 useHead({
@@ -17,11 +20,5 @@ useHead({
     name: 'theme-color',
     content: themeColor,
   }],
-  bodyAttrs: {
-    class: 'bg-surface text-on-surface',
-  },
-  htmlAttrs: {
-    class: darkMode.value ? 'dark' : '',
-  },
 });
 </script>

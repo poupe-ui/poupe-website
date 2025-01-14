@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: false,
+  layout: 'themeless',
 
   validate: (route): boolean => {
     return isValidRouteParam('primary', isHexValue, route) && isValidRouteParam('scheme', isThemeSchemeKey, route);
@@ -19,8 +19,6 @@ const scheme = useThemeScheme($route.params.scheme) || 'content';
 const primary = useHCTColor($route.params.primary) || useRandomColor();
 const themeColor = hexFromHCT(primary);
 const themeURL = computed(() => `/api/tailwindcss/${scheme}/${themeColor.slice(1)}`);
-
-const { darkMode } = useTheme();
 
 useHead({
   title: `${scheme}:${themeColor} — @poupe/theme-builder`,
@@ -34,11 +32,5 @@ useHead({
     name: 'theme-color',
     content: themeColor,
   }],
-  bodyAttrs: {
-    class: 'bg-surface text-on-surface',
-  },
-  htmlAttrs: {
-    class: darkMode.value ? 'dark' : '',
-  },
 });
 </script>
