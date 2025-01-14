@@ -1,12 +1,11 @@
 import {
+  type StandardDynamicSchemeKey,
   HCT,
 
   hexFromHCT,
-} from '@poupe/theme-builder/core';
+} from '@poupe/theme-builder';
 
 import {
-  type StandardDynamicSchemeKey,
-
   useHCTColor,
   useRandomHexColor,
   useThemeScheme,

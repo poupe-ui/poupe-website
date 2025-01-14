@@ -6,11 +6,16 @@
 </template>
 
 <script setup lang="ts">
+import {
+  type HCT,
+  type StandardDynamicSchemeKey,
+} from '@poupe/theme-builder';
+
 const $props = defineProps<{
-  modelValue: typeof HCT;
+  modelValue: HCT;
   scheme: StandardDynamicSchemeKey;
 }>();
 
-const primary = computed<HCT>(() => $props.modelValue);
-const hexPrimary = computed<HexColor>(() => hexFromHCT(primary.value));
+const primary = computed(() => $props.modelValue);
+const hexPrimary = computed(() => hexFromHCT(primary.value));
 </script>

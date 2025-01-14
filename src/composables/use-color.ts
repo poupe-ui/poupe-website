@@ -11,7 +11,6 @@ import {
 
 export {
   type StandardDynamicSchemeKey,
-  HCT,
 
   hexFromHCT,
   hct,
