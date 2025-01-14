@@ -10,26 +10,27 @@ definePageMeta({
 });
 
 const primary = useHCTColor(useRoute().params.primary) || useRandomColor();
-const hexPrimary = hexFromHCT(primary);
-const { darkMode } = useUserSettings();
+const themeColor = hexFromHCT(primary);
+const themeURL = computed(() => `/api/tailwindcss/content/${themeColor.slice(1)}`);
+const { darkMode } = useTheme();
 
 useHead({
-  title: `${hexPrimary} — @poupe/theme-builder`,
+  title: `${themeColor} — @poupe/theme-builder`,
   link: [{
     id: 'poupe-theme-link',
     rel: 'stylesheet',
-    href: `/api/tailwindcss/content/${hexPrimary.slice(1)}`,
+    href: themeURL,
     tagPriority: 20,
   }],
   meta: [{
     name: 'theme-color',
-    content: hexPrimary,
+    content: themeColor,
   }],
   bodyAttrs: {
     class: 'bg-surface text-on-surface',
   },
   htmlAttrs: {
-    class: darkMode ? 'dark' : '',
+    class: darkMode.value ? 'dark' : '',
   },
 });
 </script>

@@ -3,25 +3,25 @@
 </template>
 
 <script setup lang="ts">
-const primary = '#caae88';
-const { darkMode } = useUserSettings();
+const { darkMode, themeColor } = useTheme();
+const themeURL = computed(() => `/api/tailwindcss/content/${themeColor.value.slice(1)}`);
 
 useHead({
   link: [{
     id: 'poupe-theme-link',
     rel: 'stylesheet',
-    href: `/api/tailwindcss/content/${primary.slice(1)}`,
+    href: themeURL,
     tagPriority: 0,
   }],
   meta: [{
     name: 'theme-color',
-    content: primary,
+    content: themeColor,
   }],
   bodyAttrs: {
     class: 'bg-surface text-on-surface',
   },
   htmlAttrs: {
-    class: darkMode ? 'dark' : '',
+    class: darkMode.value ? 'dark' : '',
   },
 });
 </script>
