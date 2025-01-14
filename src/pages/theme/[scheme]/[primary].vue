@@ -15,8 +15,8 @@ definePageMeta({
 });
 
 const $route = useRoute();
-const scheme = useThemeScheme($route.params.scheme);
-const primary = useHCTColor($route.params.primary);
+const scheme = useThemeScheme($route.params.scheme) || 'vibrant';
+const primary = useHCTColor($route.params.primary) || useRandomColor();
 const hexPrimary = hexFromHCT(primary);
 
 const isDark = useDark();

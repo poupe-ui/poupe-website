@@ -9,7 +9,7 @@ definePageMeta({
   validate: (route): boolean => isValidRouteParam('primary', isHexValue, route),
 });
 
-const primary = useHCTColor(useRoute().params.primary);
+const primary = useHCTColor(useRoute().params.primary) || useRandomColor();
 const hexPrimary = hexFromHCT(primary);
 
 const isDark = useDark();
