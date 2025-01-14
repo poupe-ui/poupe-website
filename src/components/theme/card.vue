@@ -7,10 +7,10 @@
 
 <script setup lang="ts">
 const $props = defineProps<{
-  modelValue: typeof Hct;
+  modelValue: typeof HCT;
   scheme: StandardDynamicSchemeKey;
 }>();
 
-const primary = computed<Hct>(() => $props.modelValue);
-const hexPrimary = computed<HexColor>(() => hexFromHct(primary.value));
+const primary = computed<HCT>(() => $props.modelValue);
+const hexPrimary = computed<HexColor>(() => hexFromHCT(primary.value));
 </script>

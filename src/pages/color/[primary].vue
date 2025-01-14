@@ -9,8 +9,8 @@ definePageMeta({
   validate: (route): boolean => isValidRouteParam('primary', isHexValue, route),
 });
 
-const primary = useHctColor(useRoute().params.primary);
-const hexPrimary = hexFromHct(primary);
+const primary = useHCTColor(useRoute().params.primary);
+const hexPrimary = hexFromHCT(primary);
 
 useHead({
   title: `${hexPrimary} — @poupe/theme-builder`,

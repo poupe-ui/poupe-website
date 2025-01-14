@@ -11,10 +11,10 @@ import {
 
 export {
   type StandardDynamicSchemeKey,
-  Hct,
+  HCT,
 
-  hexFromHct,
-  rgbFromHct,
+  hexFromHCT,
+  rgbFromHCT,
   hct,
 } from '@poupe/theme-builder';
 
@@ -26,8 +26,8 @@ export const isHexValue = (s: string | HexColor): boolean => reHexValue.test(s);
 /** @returns a random color in {@link HexColor} format */
 export const useRandomHexColor = () => uniqolor.random().color as HexColor;
 
-/** useHctColor attempts to convert an string to Hct */
-export const useHctColor = (value: string | string[] = useRandomHexColor()) => {
+/** useHCTColor attempts to convert an string to HCT */
+export const useHCTColor = (value: string | string[] = useRandomHexColor()) => {
   if (!Array.isArray(value))
     return isHexValue(value) ? hct(value) : undefined;
   else if (value.length === 1)
@@ -39,9 +39,10 @@ export const useHctColor = (value: string | string[] = useRandomHexColor()) => {
 export const isThemeSchemeKey = (s: string): boolean => s in standardDynamicSchemes;
 
 /** useThemeScheme attempts to convert an string to a {@link StandardDynamicSchemeKey}. */
-export const useThemeScheme = (value: string) => {
-  if (value in standardDynamicSchemes) {
-    return value as StandardDynamicSchemeKey;
+export const useThemeScheme = (value: string|string[]) => {
+  const key = Array.isArray(value) ? value[0] : value;
+  if (key in standardDynamicSchemes) {
+    return key as StandardDynamicSchemeKey;
   }
   return undefined;
 };

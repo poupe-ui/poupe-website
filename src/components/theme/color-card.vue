@@ -37,10 +37,10 @@
 import { withShades } from '@poupe/theme-builder/tailwind';
 
 const $props = defineProps<{
-  modelValue: Hct;
+  modelValue: typeof HCT;
 }>();
 
-const hexColor = computed(() => hexFromHct($props.modelValue));
+const hexColor = computed(() => hexFromHCT($props.modelValue));
 
 const shades = computed(() => withShades($props.modelValue));
 </script>
