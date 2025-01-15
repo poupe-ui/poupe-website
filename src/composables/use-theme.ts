@@ -1,10 +1,18 @@
 const defaultThemeColor = '#caae88';
 
+type ColorMode = 'dark' | 'light';
+
+const preferredColorMode = (): ColorMode => 'light';
+
+const cookieName = 'poupe-color-mode';
+const cookieMaxAge = 1000 * 60 * 60 * 24;
+const cookieSameSite = 'lax';
+
 export const useTheme = () => {
-  const themeCookie = useCookie<'dark' | 'light'>('poupe-color-mode', {
-    maxAge: 1000 * 60 * 60 * 24,
-    sameSite: 'lax',
-    default: () => 'light',
+  const themeCookie = useCookie<ColorMode>(cookieName, {
+    maxAge: cookieMaxAge,
+    sameSite: cookieSameSite,
+    default: () => preferredColorMode(),
   });
 
   const darkMode = computed<boolean>({
