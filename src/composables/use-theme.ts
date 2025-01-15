@@ -1,10 +1,24 @@
+import { useMediaQuery } from '@vueuse/core';
+
 const defaultThemeColor = '#caae88';
+const secondsPerDay = 60 * 60 * 24;
+
+export type ColorMode = 'dark' | 'light';
+
+const preferredColorMode = computed((): ColorMode => {
+  const wantsDark = useMediaQuery('(prefers-color-scheme: dark)');
+  return wantsDark ? 'dark' : 'light';
+});
+
+const cookieName = 'poupe-color-mode';
+const cookieMaxAge = 1000 * secondsPerDay;
+const cookieSameSite = 'lax';
 
 export const useTheme = () => {
-  const themeCookie = useCookie<'dark' | 'light'>('poupe-color-mode', {
-    maxAge: 1000 * 60 * 60 * 24,
-    sameSite: 'lax',
-    default: () => 'light',
+  const themeCookie = useCookie<ColorMode>(cookieName, {
+    maxAge: cookieMaxAge,
+    sameSite: cookieSameSite,
+    default: () => preferredColorMode.value,
   });
 
   const darkMode = computed<boolean>({
