@@ -20,7 +20,7 @@ export const useTheme = () => {
   /** @returns {@link ColorMode} to use by default considering user preferences */
   const preferredColorMode = computed((): ColorMode => {
     const wantsDark = useMediaQuery('(prefers-color-scheme: dark)');
-    return wantsDark ? 'dark' : 'light';
+    return wantsDark.value ? 'dark' : 'light';
   });
 
   /** @returns the cookie used to store the chosen {@link ColorMode} persistently */
