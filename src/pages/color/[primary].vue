@@ -16,7 +16,7 @@ definePageMeta({
 });
 
 const primary = useHCTColor(useRoute().params.primary) || useRandomColor();
-const themeColor = hexFromHCT(primary);
+const themeColor = hexFromHct(primary);
 const themeURL = computed(() => `/api/tailwindcss/content/${themeColor.slice(1)}`);
 
 useHead({

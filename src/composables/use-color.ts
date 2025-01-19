@@ -12,7 +12,7 @@ import {
 export {
   type StandardDynamicSchemeKey,
 
-  hexFromHCT,
+  hexFromHct,
   hct,
 } from '@poupe/theme-builder';
 
@@ -24,10 +24,10 @@ export const isHexValue = (s: string | HexColor): boolean => reHexValue.test(s);
 /** @returns a random color in {@link HexColor} format */
 export const useRandomHexColor = () => uniqolor.random().color as HexColor;
 
-/** @returns a random color as {@link HCT} object */
+/** @returns a random color as {@link Hct} object */
 export const useRandomColor = () => hct(useRandomHexColor());
 
-/** useHCTColor attempts to convert an string to HCT */
+/** useHCTColor attempts to convert an string to {@link Hct} */
 export const useHCTColor = (value: string | string[] = useRandomHexColor()) => {
   if (!Array.isArray(value))
     return isHexValue(value) ? hct(value) : undefined;

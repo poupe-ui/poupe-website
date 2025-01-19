@@ -1,6 +1,6 @@
 import {
   type CSSRuleObject,
-  type HCT,
+  type Hct,
   type StandardDynamicSchemeKey,
 
   formatCSSRuleObjects,
@@ -8,7 +8,7 @@ import {
 } from '@poupe/theme-builder';
 
 interface ThemeOptions {
-  primary: HCT;
+  primary: Hct;
   scheme: StandardDynamicSchemeKey;
 }
 

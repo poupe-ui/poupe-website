@@ -36,7 +36,7 @@ definePageMeta({
 const $route = useRoute();
 const scheme = useThemeScheme($route.params.scheme) || 'content';
 const primary = useHCTColor($route.params.primary) || useRandomColor();
-const themeColor = hexFromHCT(primary);
+const themeColor = hexFromHct(primary);
 const themeURL = computed(() => `/api/tailwindcss/${scheme}/${themeColor.slice(1)}`);
 
 useHead({

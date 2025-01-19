@@ -15,8 +15,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0(magicast@0.3.5)(pinia@2.3.0(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3)))(rollup@4.30.1)
       '@poupe/theme-builder':
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.5.2
+        version: 0.5.2
       '@vueuse/core':
         specifier: ^12.4.0
         version: 12.4.0(typescript@5.7.3)
@@ -1141,9 +1141,9 @@ packages:
     resolution: {integrity: sha512-graTDvn476QuCIyHP65b48xMvg73cgy9QQp+dUfT1YhoanUvL6Yvp3+YB8+PYjkh1Sz2Zdt5NktmO5J8q8OcLw==}
     engines: {node: '>= 18.20.5', pnpm: '>= 9.15.3'}
 
-  '@poupe/theme-builder@0.5.0':
-    resolution: {integrity: sha512-7hXmMbfvKcdHydym2dZc9Z0RSxXotd+VQ5fq6G0adbbvxwUiP6cOdLkh1xpwLkhUTbh8QmtEwATJl34EX4ENoA==}
-    engines: {node: '>= 18.20.5', pnpm: '>= 9.15.3'}
+  '@poupe/theme-builder@0.5.2':
+    resolution: {integrity: sha512-9WdnwMt7FFhqUjg6LBMjIIXm4EhDze6UAuS/xMfPI8E1YrbDY9webY54ljgKxZZnB3o+SDoYv3VsPv9wp45RLw==}
+    engines: {node: '>= 18.20.5', pnpm: '>= 9.15.4'}
 
   '@redocly/ajv@8.11.2':
     resolution: {integrity: sha512-io1JpnwtIcvojV7QKDUSIuMN/ikdOUd1ReEnUnMKGfDVridQZ31J0MmIuqwuRjWDZfmvr+Q0MqCcfHM2gTivOg==}
@@ -4674,6 +4674,7 @@ packages:
   wrangler@3.102.0:
     resolution: {integrity: sha512-Za4DstbS3+/hu+///K/4dFFeV6XbPBAGp7NCnVajchxRTwEPTdbO5eezH0HLJPMHK6G/0yIzyhlEMnyg4YzHAA==}
     engines: {node: '>=16.17.0'}
+    deprecated: Downgrade to 3.99.0
     hasBin: true
     peerDependencies:
       '@cloudflare/workers-types': ^4.20241230.0
@@ -5992,9 +5993,10 @@ snapshots:
       - jiti
       - supports-color
 
-  '@poupe/theme-builder@0.5.0':
+  '@poupe/theme-builder@0.5.2':
     dependencies:
       '@material/material-color-utilities': 0.3.0
+      colord: 2.9.3
       tailwindcss: 3.4.17
       type-fest: 4.32.0
     transitivePeerDependencies:
