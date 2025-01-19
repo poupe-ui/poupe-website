@@ -1,6 +1,7 @@
 import uniqolor from 'uniqolor';
 
 import {
+  type Hct,
   type HexColor,
   type StandardDynamicSchemeKey,
 
@@ -28,12 +29,15 @@ export const useRandomHexColor = () => uniqolor.random().color as HexColor;
 export const useRandomColor = () => hct(useRandomHexColor());
 
 /** useHCTColor attempts to convert an string to {@link Hct} */
-export const useHCTColor = (value: string | string[] = useRandomHexColor()) => {
-  if (!Array.isArray(value))
-    return isHexValue(value) ? hct(value) : undefined;
-  else if (value.length === 1)
-    return isHexValue(value[0]) ? hct(value[0]) : undefined;
-  return undefined;
+export const useHCTColor = (value: string | string[] = useRandomHexColor()): Hct | undefined => {
+  if (!Array.isArray(value)) {
+    if (!isHexValue(value))
+      return undefined;
+
+    return hct(value.startsWith('#') ? value : `#${value}`);
+  }
+
+  return value.length > 0 ? useHCTColor(value[0]) : undefined;
 };
 
 /** @returns if the value is a valid {@link StandardDynamicSchemeKey} */
