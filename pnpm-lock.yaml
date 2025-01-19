@@ -15,8 +15,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0(magicast@0.3.5)(pinia@2.3.1(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3)))(rollup@4.31.0)
       '@poupe/theme-builder':
-        specifier: ^0.5.5
-        version: 0.5.5
+        specifier: link:../poupe/packages/theme-builder
+        version: link:../poupe/packages/theme-builder
       '@vueuse/core':
         specifier: ^12.5.0
         version: 12.5.0(typescript@5.7.3)
@@ -917,9 +917,6 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@material/material-color-utilities@0.3.0':
-    resolution: {integrity: sha512-ztmtTd6xwnuh2/xu+Vb01btgV8SQWYCaK56CkRK8gEkWe5TuDyBcYJ0wgkMRn+2VcE9KUmhvkz+N9GHrqw/C0g==}
-
   '@microsoft/tsdoc-config@0.17.1':
     resolution: {integrity: sha512-UtjIFe0C6oYgTnad4q1QP4qXwLhe6tIpNTRStJ2RZEPIkqQPREAwE5spzVxsdn9UaEMUqhh0AqSx3X4nWAKXWw==}
 
@@ -1145,10 +1142,6 @@ packages:
 
   '@poupe/eslint-config@0.4.13':
     resolution: {integrity: sha512-4AuCKiSb0Lzh5TVhgocr3pZ3T3ABDWhSQzG6YazDawU8epF9h2vbX5jSYpkc+9fthtFvt+bTdqkEOD1JEhoQ1g==}
-    engines: {node: '>= 18.20.5', pnpm: '>= 9.15.4'}
-
-  '@poupe/theme-builder@0.5.5':
-    resolution: {integrity: sha512-Af8eK5rKmT3wcn7VM6cy7HIAiHozK156T9UDnKXLYbr/1vBd7j2m5zOskgtMIl4t2p5h0ihi3V2ctHoyaTMfXw==}
     engines: {node: '>= 18.20.5', pnpm: '>= 9.15.4'}
 
   '@redocly/ajv@8.11.2':
@@ -5535,8 +5528,6 @@ snapshots:
       - encoding
       - supports-color
 
-  '@material/material-color-utilities@0.3.0': {}
-
   '@microsoft/tsdoc-config@0.17.1':
     dependencies:
       '@microsoft/tsdoc': 0.15.1
@@ -6050,15 +6041,6 @@ snapshots:
     transitivePeerDependencies:
       - jiti
       - supports-color
-
-  '@poupe/theme-builder@0.5.5':
-    dependencies:
-      '@material/material-color-utilities': 0.3.0
-      colord: 2.9.3
-      tailwindcss: 3.4.17
-      type-fest: 4.33.0
-    transitivePeerDependencies:
-      - ts-node
 
   '@redocly/ajv@8.11.2':
     dependencies:
