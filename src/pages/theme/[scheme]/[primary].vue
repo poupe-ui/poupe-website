@@ -19,6 +19,7 @@
         </ul>
 
         <theme-colors-table />
+        <theme-scheme />
       </div>
     </theme-card>
   </div>
