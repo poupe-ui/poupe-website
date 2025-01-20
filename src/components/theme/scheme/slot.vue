@@ -1,18 +1,20 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   bg: string;
   text: string;
   label?: string;
 }>();
+
+const label = computed(() => props.label || props.bg.split('-').slice(1).join(' '));
 </script>
 
 <template>
-  <div :class="`p-2 ${bg} ${text}`">
-    <span class="capitalize">
-      <span v-if="label">{{ label }}</span>
-      <span v-else>
-        {{ bg.split('-').slice(1).join(' ') }}
-      </span>
-    </span>
+  <div
+    class="p-2 capitalize"
+    :class="[bg, text]"
+    role="status"
+    :aria-label="label"
+  >
+    {{ label }}
   </div>
 </template>
