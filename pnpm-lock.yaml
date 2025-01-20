@@ -58,8 +58,8 @@ importers:
         specifier: 6.13.1
         version: 6.13.1(magicast@0.3.5)(rollup@4.30.1)
       '@poupe/eslint-config':
-        specifier: ^0.4.12
-        version: 0.4.12(jiti@2.4.2)
+        specifier: ^0.4.13
+        version: 0.4.13(jiti@2.4.2)
       eslint:
         specifier: ^9.18.0
         version: 9.18.0(jiti@2.4.2)
@@ -1137,9 +1137,9 @@ packages:
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
-  '@poupe/eslint-config@0.4.12':
-    resolution: {integrity: sha512-graTDvn476QuCIyHP65b48xMvg73cgy9QQp+dUfT1YhoanUvL6Yvp3+YB8+PYjkh1Sz2Zdt5NktmO5J8q8OcLw==}
-    engines: {node: '>= 18.20.5', pnpm: '>= 9.15.3'}
+  '@poupe/eslint-config@0.4.13':
+    resolution: {integrity: sha512-4AuCKiSb0Lzh5TVhgocr3pZ3T3ABDWhSQzG6YazDawU8epF9h2vbX5jSYpkc+9fthtFvt+bTdqkEOD1JEhoQ1g==}
+    engines: {node: '>= 18.20.5', pnpm: '>= 9.15.4'}
 
   '@poupe/theme-builder@0.5.3':
     resolution: {integrity: sha512-PvrZ9TANE3eimD7sgYfJDTfbDTQg5TAlrhVI5dbYdZHzsqEetSnxzU5e3OgyJp+QnY4oeUlg8YxkVsMbbsjYmw==}
@@ -5977,7 +5977,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@poupe/eslint-config@0.4.12(jiti@2.4.2)':
+  '@poupe/eslint-config@0.4.13(jiti@2.4.2)':
     dependencies:
       '@eslint/js': 9.18.0
       '@stylistic/eslint-plugin': 2.13.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
