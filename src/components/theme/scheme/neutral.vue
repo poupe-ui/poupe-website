@@ -26,12 +26,19 @@ const colsClass: Array<string> = [
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div
+    class="flex flex-col"
+    role="group"
+    aria-label="Neutral Colors"
+  >
     <div
       v-for="(d, i) in data"
       :key="i"
     >
-      <div :class="`grid ${colsClass[i]}`">
+      <div
+        class="grid"
+        :class="colsClass[i]"
+      >
         <theme-scheme-slot
           v-for="v in d"
           :key="v.bg"

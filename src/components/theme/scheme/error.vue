@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const data: Array<ThemeSchemeSlot & { class?: string }> = [
+type Cell = ThemeSchemeSlot & { class?: string };
+const data: Array<Cell> = [
   { bg: 'bg-error', text: 'text-on-error', class: 'flex-1' },
   { bg: 'bg-on-error', text: 'text-error' },
   { bg: 'bg-error-container', text: 'text-on-error-container', class: 'mt-1 flex-1' },
@@ -8,7 +9,10 @@ const data: Array<ThemeSchemeSlot & { class?: string }> = [
 </script>
 
 <template>
-  <div>
+  <div
+    role="group"
+    aria-label="Error Colors"
+  >
     <theme-scheme-slot
       v-for="v in data"
       :key="v.bg"

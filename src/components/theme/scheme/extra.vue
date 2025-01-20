@@ -7,7 +7,11 @@ const inverse: Array<ThemeSchemeSlot> = [
 </script>
 
 <template>
-  <div class="flex flex-col justify-between">
+  <div
+    class="flex flex-col justify-between"
+    role="group"
+    aria-label="Additional Colors"
+  >
     <div>
       <theme-scheme-slot
         v-for="v in inverse"

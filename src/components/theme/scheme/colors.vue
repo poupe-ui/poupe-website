@@ -40,7 +40,11 @@ const data: Array<Array<Cell | Array<Cell>>> = [
 </script>
 
 <template>
-  <div class="grid grid-cols-3 gap-1">
+  <div
+    class="grid grid-cols-3 gap-1"
+    role="group"
+    aria-label="Main Colors"
+  >
     <div
       v-for="(d, i) in data"
       :key="i"

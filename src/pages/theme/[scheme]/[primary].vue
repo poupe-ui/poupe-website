@@ -19,7 +19,7 @@
         </ul>
 
         <theme-colors-table />
-        <theme-scheme />
+        <theme-scheme :aria-label="`${themColor} ${scheme} theme`" />
       </div>
     </theme-card>
   </div>
@@ -43,7 +43,7 @@ const themeURL = computed(() => `/api/tailwindcss/${scheme}/${themeColor.slice(1
 useHead({
   title: `${scheme}:${themeColor} — @poupe/theme-builder`,
   link: [{
-    id: 'poupe-theme-link',
+    key: 'poupe-theme-link',
     rel: 'stylesheet',
     href: themeURL,
     tagPriority: 20,

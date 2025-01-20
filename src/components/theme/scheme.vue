@@ -1,5 +1,17 @@
+<script setup lang="ts">
+const props = defineProps<{
+  ariaLabel?: string;
+}>();
+
+const ariaLabel = computed(() => props.ariaLabel || 'Theme Colors');
+</script>
+
 <template>
-  <div class="text-xs max-w-2xl">
+  <div
+    class="text-xs max-w-2xl"
+    role="region"
+    :aria-label="ariaLabel"
+  >
     <table>
       <tbody>
         <tr>
