@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="m-2 p-2 rounded border-primary border shadow-shadow shadow-md bg-primary-container text-on-primary-container">
+  <div class="surface-bright md:m-2 p-2 md:rounded md:shadow-shadow md:shadow-md">
     <div class="flex justify-between items-center">
       <slot name="title">
         <h1
