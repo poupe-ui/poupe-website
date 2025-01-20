@@ -8,29 +8,13 @@ const ariaLabel = computed(() => props.ariaLabel || 'Theme Colors');
 
 <template>
   <div
-    class="text-xs max-w-2xl"
+    class="text-xs max-w-2xl grid grid-cols-4 gap-2"
     role="region"
     :aria-label="ariaLabel"
   >
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <theme-scheme-colors />
-          </td>
-          <td class="inline-block align-top">
-            <theme-scheme-error />
-          </td>
-        </tr>
-        <tr>
-          <td class="inline-block align-top">
-            <theme-scheme-neutral />
-          </td>
-          <td>
-            <theme-scheme-extra />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <theme-scheme-colors class="col-span-3" />
+    <theme-scheme-error class="self-start" />
+    <theme-scheme-neutral class="col-span-3" />
+    <theme-scheme-extra class="self-start" />
   </div>
 </template>
