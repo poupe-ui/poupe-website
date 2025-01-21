@@ -15,8 +15,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0(magicast@0.3.5)(pinia@2.3.0(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3)))(rollup@4.30.1)
       '@poupe/theme-builder':
-        specifier: ^0.5.3
-        version: 0.5.3
+        specifier: ^0.5.4
+        version: 0.5.4
       '@vueuse/core':
         specifier: ^12.4.0
         version: 12.4.0(typescript@5.7.3)
@@ -1141,8 +1141,8 @@ packages:
     resolution: {integrity: sha512-4AuCKiSb0Lzh5TVhgocr3pZ3T3ABDWhSQzG6YazDawU8epF9h2vbX5jSYpkc+9fthtFvt+bTdqkEOD1JEhoQ1g==}
     engines: {node: '>= 18.20.5', pnpm: '>= 9.15.4'}
 
-  '@poupe/theme-builder@0.5.3':
-    resolution: {integrity: sha512-PvrZ9TANE3eimD7sgYfJDTfbDTQg5TAlrhVI5dbYdZHzsqEetSnxzU5e3OgyJp+QnY4oeUlg8YxkVsMbbsjYmw==}
+  '@poupe/theme-builder@0.5.4':
+    resolution: {integrity: sha512-d+QP3Ld8rHIPm571dAbLdlvz7ht5bRtpXSLDCYHAWjL3Iq9L1SgfINsFBy8WCYGos4g/sU/CTEsskbzJnF64ig==}
     engines: {node: '>= 18.20.5', pnpm: '>= 9.15.4'}
 
   '@redocly/ajv@8.11.2':
@@ -5993,7 +5993,7 @@ snapshots:
       - jiti
       - supports-color
 
-  '@poupe/theme-builder@0.5.3':
+  '@poupe/theme-builder@0.5.4':
     dependencies:
       '@material/material-color-utilities': 0.3.0
       colord: 2.9.3
