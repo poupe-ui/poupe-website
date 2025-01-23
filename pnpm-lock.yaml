@@ -29,6 +29,9 @@ importers:
       reka-ui:
         specifier: 1.0.0-alpha.8
         version: 1.0.0-alpha.8(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3))
+      ufo:
+        specifier: ^1.5.4
+        version: 1.5.4
       uniqolor:
         specifier: ^1.1.1
         version: 1.1.1

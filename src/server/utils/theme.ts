@@ -1,6 +1,6 @@
 import {
+  type Hct,
   type StandardDynamicSchemeKey,
-  Hct,
 
   hexFromHct,
 } from '@poupe/theme-builder';
@@ -12,15 +12,8 @@ import {
 } from '~/composables/use-color';
 
 export function hctToURL(c?: Hct) {
-  if (c === undefined) {
-    return useRandomHexColor().slice(1);
-  }
-
-  if (c instanceof Hct) {
-    return hexFromHct(c).slice(1);
-  }
-
-  return undefined;
+  const hex = c ? hexFromHct(c) : useRandomHexColor();
+  return hex.slice(1);
 }
 
 export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {
