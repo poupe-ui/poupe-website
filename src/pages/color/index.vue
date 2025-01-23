@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { trimPath } from '~/server/utils/path';
-
+const here = useRoute().path;
 const hex = useRandomHexColor();
-const path = trimPath(useRoute().path);
-await navigateTo(`${path}/${hex.slice(1)}`);
+await navigateTo(joinURL(here, hex.slice(1)));
 </script>
 
 <template>

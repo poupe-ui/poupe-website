@@ -19,7 +19,7 @@
         </ul>
 
         <theme-colors-table />
-        <theme-scheme :aria-label="`${themColor} ${scheme} theme`" />
+        <theme-scheme :aria-label="`${themeColor} ${scheme} theme`" />
       </div>
     </theme-card>
   </div>
