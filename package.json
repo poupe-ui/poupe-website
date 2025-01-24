@@ -15,6 +15,7 @@
     "@iconify-json/heroicons": "^1.2.2",
     "@pinia/nuxt": "^0.9.0",
     "@poupe/theme-builder": "link:../poupe/packages/theme-builder",
+    "@poupe/vue": "link:../poupe/packages/poupe-vue",
     "@vueuse/core": "^12.5.0",
     "colord": "^2.9.3",
     "nuxt": "^3.15.2",
