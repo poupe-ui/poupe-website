@@ -31,7 +31,7 @@ definePageMeta({
 });
 
 const $route = useRoute();
-const scheme = useThemeScheme($route.params.scheme);
+const { scheme } = useThemeSchemeParam($route.params.scheme);
 const { param: primaryParam, color: themeColor } = useColorParam($route.params.primary);
 
 if (scheme === undefined || themeColor === undefined || $route.path.endsWith('/')) {

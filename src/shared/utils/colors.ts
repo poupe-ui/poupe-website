@@ -9,8 +9,8 @@ import {
 
   hct,
   hexFromHct,
-
-  standardDynamicSchemes } from '@poupe/theme-builder';
+  standardDynamicSchemes,
+} from '@poupe/theme-builder';
 
 import { getParam } from './route';
 
@@ -68,11 +68,17 @@ export const useColorParam = (param?: string | string[]): {
 /** @returns if the value is a valid {@link StandardDynamicSchemeKey} */
 export const isThemeSchemeKey = (s: string): boolean => s in standardDynamicSchemes;
 
-/** useThemeScheme attempts to convert an string to a {@link StandardDynamicSchemeKey}. */
-export const useThemeScheme = (value: string | string[]) => {
+/** useThemeSchemeParam attempts to convert an string to a {@link StandardDynamicSchemeKey}. */
+export const useThemeSchemeParam = (value?: string | string[]) => {
   const key = getParam(value);
+  let scheme: StandardDynamicSchemeKey | undefined;
+
   if (key && key in standardDynamicSchemes) {
-    return key as StandardDynamicSchemeKey;
+    scheme = key as StandardDynamicSchemeKey;
   }
-  return undefined;
+
+  return {
+    param: key,
+    scheme,
+  };
 };

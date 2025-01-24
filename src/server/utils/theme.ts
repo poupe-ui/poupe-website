@@ -7,7 +7,7 @@ import {
 
 import {
   useColorParam,
-  useThemeScheme,
+  useThemeSchemeParam,
 } from '~/shared/utils/colors';
 
 export {
@@ -19,13 +19,12 @@ export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, 
   decode?: boolean;
 } = {}) {
   const s = getRouterParam(event, param, opts);
-  let out: typeof opts.fallback;
+  const { scheme } = useThemeSchemeParam(s);
 
-  if (s !== undefined) {
-    out = useThemeScheme(s);
-  }
-
-  return out === undefined ? opts.fallback : out;
+  return {
+    param: s,
+    scheme: scheme ?? opts.fallback,
+  };
 }
 
 export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {

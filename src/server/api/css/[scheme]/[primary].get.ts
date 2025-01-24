@@ -29,7 +29,7 @@ function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptio
 };
 
 export default defineEventHandler((event) => {
-  const scheme = themeSchemeFromRouterParam(event, 'scheme');
+  const { scheme } = themeSchemeFromRouterParam(event, 'scheme');
   const { param: primaryParam, color: primary, hex } = themeColorFromRouterParam(event, 'primary');
 
   if (scheme === undefined || primary === undefined || hex === undefined || event.path.endsWith('/')) {

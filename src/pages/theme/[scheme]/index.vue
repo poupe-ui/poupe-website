@@ -3,7 +3,7 @@ definePageMeta({
   layout: false,
 });
 
-const scheme = useThemeScheme(useRoute().params.scheme);
+const { scheme } = useThemeSchemeParam(useRoute().params.scheme);
 
 if (scheme === undefined) {
   throw createError({
