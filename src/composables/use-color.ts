@@ -17,7 +17,7 @@ export {
   hct,
 } from '@poupe/theme-builder';
 
-const reHexValue = /^(#?[0-9a-fA-F]){3,6}$/;
+const reHexValue = /^#?(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
 
 /** @returns if the value is a string suitable for {@link hct} */
 export const isHexValue = (s: string | HexColor): boolean => reHexValue.test(s);
