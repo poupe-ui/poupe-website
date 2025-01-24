@@ -1,3 +1,5 @@
+import { colord, extend } from 'colord';
+import colorNames from 'colord/plugins/names';
 import uniqolor from 'uniqolor';
 
 import {
@@ -11,6 +13,9 @@ import {
 } from '@poupe/theme-builder';
 
 import { getParam } from './route';
+
+/* enable color names */
+extend([colorNames]);
 
 export {
   type StandardDynamicSchemeKey,
@@ -43,6 +48,12 @@ export const useColorParam = (param?: string | string[]): {
 
   if (isHexValue(s)) {
     const hex = (s.startsWith('#') ? s : `#${s}`).toLowerCase() as HexColor;
+    return { param: s, color: hex };
+  }
+
+  const c = colord(s);
+  if (c.isValid()) {
+    const hex = c.toHex() as HexColor;
     return { param: s, color: hex };
   }
 
