@@ -10,6 +10,8 @@ import {
   standardDynamicSchemes,
 } from '@poupe/theme-builder';
 
+import { getParam } from './route';
+
 export {
   type StandardDynamicSchemeKey,
 
@@ -28,25 +30,37 @@ export const useRandomHexColor = () => uniqolor.random().color as HexColor;
 /** @returns a random color as {@link Hct} object */
 export const useRandomColor = () => hct(useRandomHexColor());
 
-/** useHCTColor attempts to convert an string to {@link Hct} */
-export const useHCTColor = (value: string | string[] = useRandomHexColor()): Hct | undefined => {
-  if (!Array.isArray(value)) {
-    if (!isHexValue(value))
-      return undefined;
-
-    return hct(value.startsWith('#') ? value : `#${value}`);
+/** @returns the normalized color for the given parameter */
+export const useColorParam = (param?: string | string[]): {
+  param?: string;
+  color?: string;
+  hex?: HexColor;
+} => {
+  const s = getParam(param);
+  if (s === undefined || s === '') {
+    return { param: s };
   }
 
-  return value.length > 0 ? useHCTColor(value[0]) : undefined;
+  if (isHexValue(s)) {
+    const hex = (s.startsWith('#') ? s : `#${s}`).toLowerCase() as HexColor;
+    return { param: s, color: hex };
+  }
+
+  return { param: s };
 };
 
+/** useHCTColor attempts to convert an string to {@link Hct} */
+export const useHCTColor = (value: string | string[] = useRandomHexColor()): Hct | undefined => {
+  const { color } = useColorParam(value);
+  return color ? hct(color) : undefined;
+};
 /** @returns if the value is a valid {@link StandardDynamicSchemeKey} */
 export const isThemeSchemeKey = (s: string): boolean => s in standardDynamicSchemes;
 
 /** useThemeScheme attempts to convert an string to a {@link StandardDynamicSchemeKey}. */
 export const useThemeScheme = (value: string | string[]) => {
-  const key = Array.isArray(value) ? value[0] : value;
-  if (key in standardDynamicSchemes) {
+  const key = getParam(value);
+  if (key && key in standardDynamicSchemes) {
     return key as StandardDynamicSchemeKey;
   }
   return undefined;

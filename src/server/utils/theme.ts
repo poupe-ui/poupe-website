@@ -9,7 +9,7 @@ import {
   useHCTColor,
   useRandomHexColor,
   useThemeScheme,
-} from '~/composables/use-color';
+} from '~/shared/utils/colors';
 
 export function hctToURL(c?: Hct) {
   const hex = c ? hexFromHct(c) : useRandomHexColor();
