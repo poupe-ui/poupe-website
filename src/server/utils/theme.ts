@@ -2,11 +2,12 @@ import {
   type Hct,
   type StandardDynamicSchemeKey,
 
+  hct,
   hexFromHct,
 } from '@poupe/theme-builder';
 
 import {
-  useHCTColor,
+  useColorParam,
   useRandomHexColor,
   useThemeScheme,
 } from '~/shared/utils/colors';
@@ -37,8 +38,9 @@ export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, p
   const s = getRouterParam(event, param, opts);
   let out: typeof opts.fallback;
 
-  if (s !== undefined) {
-    out = useHCTColor(s);
+  const { color } = useColorParam(s);
+  if (color !== undefined) {
+    out = hct(color);
   }
 
   return out === undefined ? opts.fallback : out;
