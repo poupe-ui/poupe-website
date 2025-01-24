@@ -20,6 +20,9 @@ importers:
       '@poupe/theme-builder':
         specifier: link:../poupe/packages/theme-builder
         version: link:../poupe/packages/theme-builder
+      '@poupe/vue':
+        specifier: link:../poupe/packages/poupe-vue
+        version: link:../poupe/packages/poupe-vue
       '@vueuse/core':
         specifier: ^13.0.0
         version: 13.0.0(vue@3.5.13(typescript@5.8.2))
