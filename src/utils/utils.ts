@@ -2,5 +2,5 @@ export {
   hct,
   hctToURL,
   useColorParam,
-  useThemeScheme,
+  useThemeSchemeParam,
 } from '~/shared/utils/colors';
