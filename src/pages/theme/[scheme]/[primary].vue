@@ -3,7 +3,7 @@
     <theme-card v-if="primary && scheme">
       <template #title>
         <h1 class="text-2xl font-bold capitalize">
-          <span class="font-mono">{{ themeColor }}</span>
+          <span class="font-mono lowercase">{{ themeColor }}</span>
           {{ scheme }}
           theme
         </h1>
