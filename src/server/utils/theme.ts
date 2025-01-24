@@ -3,19 +3,16 @@ import {
   type StandardDynamicSchemeKey,
 
   hct,
-  hexFromHct,
 } from '@poupe/theme-builder';
 
 import {
   useColorParam,
-  useRandomHexColor,
   useThemeScheme,
 } from '~/shared/utils/colors';
 
-export function hctToURL(c?: Hct) {
-  const hex = c ? hexFromHct(c) : useRandomHexColor();
-  return hex.slice(1);
-}
+export {
+  hctToURL,
+} from '~/shared/utils/colors';
 
 export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {
   fallback?: StandardDynamicSchemeKey;
