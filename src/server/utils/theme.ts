@@ -38,10 +38,14 @@ export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, p
   const s = getRouterParam(event, param, opts);
   let out: typeof opts.fallback;
 
-  const { color } = useColorParam(s);
-  if (color !== undefined) {
-    out = hct(color);
+  const { color: hex } = useColorParam(s);
+  if (hex !== undefined) {
+    out = hct(hex);
   }
 
-  return out === undefined ? opts.fallback : out;
+  return {
+    param: s,
+    color: out ?? opts.fallback,
+    hex,
+  };
 }
