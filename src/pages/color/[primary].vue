@@ -1,6 +1,9 @@
 <template>
   <div class="flex w-screen justify-center">
-    <theme-card :title="`Hello, ${themeColor}`">
+    <theme-card
+      v-if="primary"
+      :title="`Hello, ${themeColor}`"
+    >
       <div class="flex justify-center">
         <theme-shades-bar v-model="primary" />
       </div>
@@ -34,7 +37,7 @@ if (themeColor !== `#${primaryParam}`) {
   });
 }
 
-const primary = hct(themeColor);
+const primary = computed(() => hct(themeColor));
 const themeURL = computed(() => `/api/tailwindcss/content/${themeColor.slice(1)}`);
 
 useHead({

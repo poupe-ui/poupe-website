@@ -1,6 +1,6 @@
 <template>
   <div class="flex w-screen justify-center">
-    <theme-card>
+    <theme-card v-if="primary && scheme">
       <template #title>
         <h1 class="text-2xl font-bold capitalize">
           <span class="font-mono">{{ themeColor }}</span>
