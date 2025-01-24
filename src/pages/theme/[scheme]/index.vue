@@ -5,10 +5,17 @@ definePageMeta({
   validate: (route): boolean => isValidRouteParam('scheme', isThemeSchemeKey, route),
 });
 
-const here = useRoute().path;
 const hex = useRandomHexColor();
 
-await navigateTo(joinURL(here, hex.slice(1)));
+await navigateTo({
+  name: 'theme-scheme-primary',
+  params: {
+    scheme: useRoute().params.scheme,
+    primary: hex.slice(1),
+  },
+}, {
+  redirectCode: 302,
+});
 </script>
 
 <template>

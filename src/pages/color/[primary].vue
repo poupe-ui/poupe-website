@@ -24,7 +24,12 @@ if (themeColor === undefined || $route.path.endsWith('/')) {
 }
 
 if (themeColor !== `#${primaryParam}`) {
-  await navigateTo(joinRelativeURL($route.path, `../${themeColor.slice(1)}`), {
+  await navigateTo({
+    name: 'color-primary',
+    params: {
+      primary: themeColor.slice(1),
+    },
+  }, {
     redirectCode: 308,
   });
 }

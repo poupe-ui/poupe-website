@@ -42,7 +42,13 @@ if (scheme === undefined || themeColor === undefined || $route.path.endsWith('/'
 }
 
 if (themeColor !== `#${primaryParam}`) {
-  await navigateTo(joinRelativeURL($route.path, `../${themeColor.slice(1)}`), {
+  await navigateTo({
+    name: 'theme-scheme-primary',
+    params: {
+      scheme,
+      primary: themeColor.slice(1),
+    },
+  }, {
     redirectCode: 308,
   });
 }

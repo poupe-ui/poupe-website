@@ -1,9 +1,15 @@
 <script setup lang="ts">
-const here = useRoute().path;
-const scheme = 'content';
 const hex = useRandomHexColor();
 
-await navigateTo(joinURL(here, scheme, hex.slice(1)));
+await navigateTo({
+  name: 'theme-scheme-primary',
+  params: {
+    scheme: 'content',
+    primary: hex.slice(1),
+  },
+}, {
+  redirectCode: 302,
+});
 </script>
 
 <template>

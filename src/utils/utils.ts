@@ -1,9 +1,4 @@
 export {
-  joinURL,
-  joinRelativeURL,
-} from 'ufo';
-
-export {
   hct,
   hexFromHct,
   isHexValue,
