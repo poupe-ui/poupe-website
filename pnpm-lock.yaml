@@ -15,8 +15,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0(magicast@0.3.5)(pinia@2.3.0(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3)))(rollup@4.30.1)
       '@poupe/theme-builder':
-        specifier: ^0.5.3
-        version: 0.5.3
+        specifier: ^0.5.6
+        version: 0.5.6
       '@vueuse/core':
         specifier: ^12.4.0
         version: 12.4.0(typescript@5.7.3)
@@ -1003,8 +1003,8 @@ packages:
     resolution: {integrity: sha512-4AuCKiSb0Lzh5TVhgocr3pZ3T3ABDWhSQzG6YazDawU8epF9h2vbX5jSYpkc+9fthtFvt+bTdqkEOD1JEhoQ1g==}
     engines: {node: '>= 18.20.5', pnpm: '>= 9.15.4'}
 
-  '@poupe/theme-builder@0.5.3':
-    resolution: {integrity: sha512-PvrZ9TANE3eimD7sgYfJDTfbDTQg5TAlrhVI5dbYdZHzsqEetSnxzU5e3OgyJp+QnY4oeUlg8YxkVsMbbsjYmw==}
+  '@poupe/theme-builder@0.5.6':
+    resolution: {integrity: sha512-0Utr1tpdbqA8aZ4X/sUQiqwTqo43ca/2/PElaBaoHtu+G6L5njHQKBvVxvjUKWhwf1YeOMytrnmt1gi8i26wrg==}
     engines: {node: '>= 18.20.5', pnpm: '>= 9.15.4'}
 
   '@redocly/ajv@8.11.2':
@@ -4109,8 +4109,8 @@ packages:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
 
-  type-fest@4.32.0:
-    resolution: {integrity: sha512-rfgpoi08xagF3JSdtJlCwMq9DGNDE0IMh3Mkpc1wUypg9vPi786AiqeBBKcqvIkq42azsBM85N490fyZjeUftw==}
+  type-fest@4.33.0:
+    resolution: {integrity: sha512-s6zVrxuyKbbAsSAD5ZPTB77q4YIdRctkTbJ2/Dqlinwz+8ooH2gd+YA7VA6Pa93KML9GockVvoxjZ2vHP+mu8g==}
     engines: {node: '>=16'}
 
   type-is@1.6.18:
@@ -5755,12 +5755,12 @@ snapshots:
       - jiti
       - supports-color
 
-  '@poupe/theme-builder@0.5.3':
+  '@poupe/theme-builder@0.5.6':
     dependencies:
       '@material/material-color-utilities': 0.3.0
       colord: 2.9.3
       tailwindcss: 3.4.17
-      type-fest: 4.32.0
+      type-fest: 4.33.0
     transitivePeerDependencies:
       - ts-node
 
@@ -6818,7 +6818,7 @@ snapshots:
 
   dot-prop@9.0.0:
     dependencies:
-      type-fest: 4.32.0
+      type-fest: 4.33.0
 
   dotenv@16.4.7: {}
 
@@ -8420,7 +8420,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.26.2
       index-to-position: 0.1.2
-      type-fest: 4.32.0
+      type-fest: 4.33.0
 
   parse-path@7.0.0:
     dependencies:
@@ -9289,7 +9289,7 @@ snapshots:
 
   type-fest@0.8.1: {}
 
-  type-fest@4.32.0: {}
+  type-fest@4.33.0: {}
 
   type-is@1.6.18:
     dependencies:
