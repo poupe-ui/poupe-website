@@ -10,11 +10,10 @@ const autoFix = !isProduction
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
     '@nuxt/fonts',
-    '@nuxt/icon',
     '@pinia/nuxt',
+    '@poupe/nuxt',
     'nitro-cloudflare-dev',
     'nuxt-svgo',
     'reka-ui/nuxt',
@@ -40,6 +39,13 @@ export default defineNuxtConfig({
         semi: true,
       },
     },
+  },
+
+  poupe: {
+    colors: {
+      primary: '#caae88',
+    },
+    omitTheme: true,
   },
 
   reka: {
