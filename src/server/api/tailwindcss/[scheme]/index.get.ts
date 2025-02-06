@@ -1,6 +1,11 @@
 export default defineEventHandler(async (event) => {
-  const here = trimPath(event.path);
-  const color = hctToURL();
+  const scheme = themeSchemeFromRouterParam(event, 'scheme');
 
-  await sendRedirect(event, `${here}/${color}`, 302);
+  if (scheme === undefined) {
+    setResponseStatus(event, 404);
+    return;
+  }
+
+  const color = hctToURL();
+  await sendRedirect(event, joinURL(event.path, color), 302);
 });

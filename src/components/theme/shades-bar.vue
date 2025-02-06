@@ -21,6 +21,7 @@
 import {
   type Hct,
 
+  hexFromHct,
   withHexShades,
 } from '@poupe/theme-builder/tailwind';
 

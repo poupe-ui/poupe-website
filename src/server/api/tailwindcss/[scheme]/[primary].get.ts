@@ -1,5 +1,4 @@
 import {
-  type CSSRuleObject,
   type Hct,
   type StandardDynamicSchemeKey,
 
@@ -13,7 +12,7 @@ interface ThemeOptions {
 }
 
 function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptions) {
-  const theme = makeCSSTheme({
+  const { styles } = makeCSSTheme({
     primary: opt.primary,
   }, {
     scheme: opt.scheme,
@@ -21,52 +20,30 @@ function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptio
     darkSuffix: '',
   });
 
-  const rules: CSSRuleObject = {
-    ':root, .light': {
-      ...theme.lightValues,
-      ...theme.lightVars,
-    },
-    '@media not print': {
-      '.dark': {
-        ...theme.darkValues,
-        ...theme.darkVars,
-      },
-    },
-  };
-
   setResponseHeaders(event, {
     'content-type': 'text/css; charset=utf-8',
     'cache-control': 'max-age=86400', // 24 hours
   });
 
-  return formatCSSRuleObjects(rules);
+  return formatCSSRuleObjects(styles);
 };
 
 export default defineEventHandler((event) => {
-  const opt: Partial<ThemeOptions> = {
-    primary: themeColorFromRouterParam(event, 'primary'),
-    scheme: themeSchemeFromRouterParam(event, 'scheme'),
+  const { scheme } = themeSchemeFromRouterParam(event, 'scheme');
+  const { param: primaryParam, color: primary, hex } = themeColorFromRouterParam(event, 'primary');
+
+  if (scheme === undefined || primary === undefined || hex === undefined || event.path.endsWith('/')) {
+    setResponseStatus(event, 404);
+    return;
+  } else if (hex !== `#${primaryParam}`) {
+    sendRedirect(event, `./${hex.slice(1)}`, 308);
+    return;
+  }
+
+  const opt: ThemeOptions = {
+    primary,
+    scheme,
   };
-
-  const errMsg = new Array<string>();
-
-  if (opt.scheme === undefined) {
-    errMsg.push('invalid scheme');
-  }
-
-  if (opt.primary === undefined) {
-    errMsg.push('invalid primary color');
-  }
-
-  if (errMsg.length > 0) {
-    setResponseStatus(event, 400);
-    setResponseHeaders(event, {
-      'content-type': 'text/plain; charset=utf-8',
-      'cache-control': 'no-cache',
-    });
-
-    return errMsg.join('\n');
-  }
 
   return handleThemeRequest(event, opt as ThemeOptions);
 });

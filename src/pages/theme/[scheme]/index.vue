@@ -1,17 +1,26 @@
 <script setup lang="ts">
-import { trimPath } from '~/server/utils/path';
-
 definePageMeta({
   layout: false,
-
-  validate: (route): boolean => isValidRouteParam('scheme', isThemeSchemeKey, route),
 });
 
-const $route = useRoute();
-const path = trimPath($route.path);
-const hex = useRandomHexColor();
+const { scheme } = useThemeSchemeParam(useRoute().params.scheme);
 
-await navigateTo(`${path}/${hex.slice(1)}`);
+if (scheme === undefined) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Not Found',
+  });
+}
+
+await navigateTo({
+  name: 'theme-scheme-primary',
+  params: {
+    scheme,
+    primary: hctToURL(),
+  },
+}, {
+  redirectCode: 302,
+});
 </script>
 
 <template>

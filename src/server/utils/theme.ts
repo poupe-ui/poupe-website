@@ -1,40 +1,30 @@
 import {
+  type Hct,
   type StandardDynamicSchemeKey,
-  Hct,
 
-  hexFromHct,
+  hct,
 } from '@poupe/theme-builder';
 
 import {
-  useHCTColor,
-  useRandomHexColor,
-  useThemeScheme,
-} from '~/composables/use-color';
+  useColorParam,
+  useThemeSchemeParam,
+} from '~/shared/utils/colors';
 
-export function hctToURL(c?: Hct) {
-  if (c === undefined) {
-    return useRandomHexColor().slice(1);
-  }
-
-  if (c instanceof Hct) {
-    return hexFromHct(c).slice(1);
-  }
-
-  return undefined;
-}
+export {
+  hctToURL,
+} from '~/shared/utils/colors';
 
 export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {
   fallback?: StandardDynamicSchemeKey;
   decode?: boolean;
 } = {}) {
   const s = getRouterParam(event, param, opts);
-  let out: typeof opts.fallback;
+  const { scheme } = useThemeSchemeParam(s);
 
-  if (s !== undefined) {
-    out = useThemeScheme(s);
-  }
-
-  return out === undefined ? opts.fallback : out;
+  return {
+    param: s,
+    scheme: scheme ?? opts.fallback,
+  };
 }
 
 export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {
@@ -44,9 +34,14 @@ export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, p
   const s = getRouterParam(event, param, opts);
   let out: typeof opts.fallback;
 
-  if (s !== undefined) {
-    out = useHCTColor(s);
+  const { color: hex } = useColorParam(s);
+  if (hex !== undefined) {
+    out = hct(hex);
   }
 
-  return out === undefined ? opts.fallback : out;
+  return {
+    param: s,
+    color: out ?? opts.fallback,
+    hex,
+  };
 }
