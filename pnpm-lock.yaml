@@ -70,8 +70,8 @@ importers:
         specifier: ^9.18.0
         version: 9.19.0(jiti@2.4.2)
       h3:
-        specifier: ^1.13.1
-        version: 1.14.0
+        specifier: ^1.15.1
+        version: 1.15.1
       nitro-cloudflare-dev:
         specifier: ^0.2.1
         version: 0.2.1
@@ -2482,8 +2482,8 @@ packages:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  h3@1.14.0:
-    resolution: {integrity: sha512-ao22eiONdgelqcnknw0iD645qW0s9NnrJHr5OBz4WOMdBdycfSas1EQf1wXRsm+PcB2Yoj43pjBPwqIpJQTeWg==}
+  h3@1.15.1:
+    resolution: {integrity: sha512-+ORaOBttdUm1E2Uu/obAyCguiI7MbBvsLTndc3gyK3zU+SYLoZXlyCP9Xgy0gikkGufFLTZXCXD6+4BsufnmHA==}
 
   has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
@@ -3095,6 +3095,9 @@ packages:
   node-gyp-build@4.8.4:
     resolution: {integrity: sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==}
     hasBin: true
+
+  node-mock-http@1.0.0:
+    resolution: {integrity: sha512-0uGYQ1WQL1M5kKvGRXWQ3uZCHtLTO8hln3oBjIusM75WoesZ909uQJs/Hb946i2SS+Gsrhkaa6iAO17jRIv6DQ==}
 
   node-releases@2.0.19:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
@@ -5067,7 +5070,7 @@ snapshots:
       fast-glob: 3.3.3
       find-up: 7.0.0
       get-port-please: 3.1.2
-      h3: 1.14.0
+      h3: 1.15.1
       mlly: 1.7.4
       mrmime: 2.0.0
       open: 10.1.0
@@ -5307,7 +5310,7 @@ snapshots:
       defu: 6.1.4
       fuse.js: 7.0.0
       giget: 1.2.3
-      h3: 1.14.0
+      h3: 1.15.1
       httpxy: 0.1.6
       jiti: 2.4.2
       listhen: 1.9.0
@@ -5473,7 +5476,7 @@ snapshots:
       defu: 6.1.4
       esbuild: 0.24.2
       fontaine: 0.5.0
-      h3: 1.14.0
+      h3: 1.15.1
       jiti: 2.4.2
       magic-regexp: 0.8.0
       magic-string: 0.30.17
@@ -5603,7 +5606,7 @@ snapshots:
       escape-string-regexp: 5.0.0
       externality: 1.0.2
       get-port-please: 3.1.2
-      h3: 1.14.0
+      h3: 1.15.1
       jiti: 2.4.2
       knitwork: 1.2.0
       magic-string: 0.30.17
@@ -5655,7 +5658,7 @@ snapshots:
       c12: 2.0.1(magicast@0.3.5)
       consola: 3.4.0
       defu: 6.1.4
-      h3: 1.14.0
+      h3: 1.15.1
       klona: 2.0.6
       pathe: 2.0.2
       postcss: 8.5.1
@@ -7443,18 +7446,17 @@ snapshots:
     dependencies:
       duplexer: 0.1.2
 
-  h3@1.14.0:
+  h3@1.15.1:
     dependencies:
       cookie-es: 1.2.2
       crossws: 0.3.3
       defu: 6.1.4
       destr: 2.0.3
       iron-webcrypto: 1.2.1
-      ohash: 1.1.4
+      node-mock-http: 1.0.0
       radix3: 1.1.2
       ufo: 1.5.4
       uncrypto: 0.1.3
-      unenv: 1.10.0
 
   has-flag@4.0.0: {}
 
@@ -7805,7 +7807,7 @@ snapshots:
       crossws: 0.3.3
       defu: 6.1.4
       get-port-please: 3.1.2
-      h3: 1.14.0
+      h3: 1.15.1
       http-shutdown: 1.2.2
       jiti: 2.4.2
       mlly: 1.7.4
@@ -8057,7 +8059,7 @@ snapshots:
       fs-extra: 11.2.0
       globby: 14.0.2
       gzip-size: 7.0.0
-      h3: 1.14.0
+      h3: 1.15.1
       hookable: 5.5.3
       httpxy: 0.1.6
       ioredis: 5.4.2
@@ -8132,6 +8134,8 @@ snapshots:
 
   node-gyp-build@4.8.4: {}
 
+  node-mock-http@1.0.0: {}
+
   node-releases@2.0.19: {}
 
   nopt@8.0.0:
@@ -8200,7 +8204,7 @@ snapshots:
       escape-string-regexp: 5.0.0
       estree-walker: 3.0.3
       globby: 14.0.2
-      h3: 1.14.0
+      h3: 1.15.1
       hookable: 5.5.3
       ignore: 7.0.3
       impound: 0.2.0(rollup@4.30.1)
@@ -9472,7 +9476,7 @@ snapshots:
       anymatch: 3.1.3
       chokidar: 3.6.0
       destr: 2.0.3
-      h3: 1.14.0
+      h3: 1.15.1
       lru-cache: 10.4.3
       node-fetch-native: 1.6.4
       ofetch: 1.4.1
