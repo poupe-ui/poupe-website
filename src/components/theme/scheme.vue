@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  ariaLabel?: string;
+  ariaLabel?: string
 }>();
 
 const ariaLabel = computed(() => props.ariaLabel || 'Theme Colors');

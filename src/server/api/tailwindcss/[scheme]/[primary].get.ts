@@ -7,8 +7,8 @@ import {
 } from '@poupe/theme-builder/tailwind';
 
 interface ThemeOptions {
-  primary: Hct;
-  scheme: StandardDynamicSchemeKey;
+  primary: Hct
+  scheme: StandardDynamicSchemeKey
 }
 
 function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptions) {
