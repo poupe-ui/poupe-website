@@ -3,7 +3,7 @@ await navigateTo({
   name: 'theme-scheme-primary',
   params: {
     scheme: 'content',
-    primary: hctToURL(),
+    primary: colorToURL(), // random
   },
 }, {
   redirectCode: 302,

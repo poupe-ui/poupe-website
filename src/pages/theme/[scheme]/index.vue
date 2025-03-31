@@ -3,7 +3,7 @@ definePageMeta({
   layout: false,
 });
 
-const { scheme } = useThemeSchemeParam(useRoute().params.scheme);
+const { scheme } = getThemeSchemeParam(useRoute().params.scheme);
 
 if (scheme === undefined) {
   throw createError({
@@ -16,7 +16,7 @@ await navigateTo({
   name: 'theme-scheme-primary',
   params: {
     scheme,
-    primary: hctToURL(),
+    primary: colorToURL(), // random
   },
 }, {
   redirectCode: 302,
