@@ -42,9 +42,9 @@ export const useRandomColor = () => hct(useRandomHexColor());
 
 /** @returns the normalized color for the given parameter */
 export const useColorParam = (param?: string | string[]): {
-  param?: string;
-  color?: string;
-  hex?: HexColor;
+  param?: string
+  color?: string
+  hex?: HexColor
 } => {
   const s = getParam(param);
   if (s === undefined || s === '') {

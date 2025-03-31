@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const props = defineProps<{
-  bg: string;
-  text: string;
-  label?: string;
+  bg: string
+  text: string
+  label?: string
 }>();
 
 const label = computed(() => props.label || props.bg.split('-').slice(1).join(' '));

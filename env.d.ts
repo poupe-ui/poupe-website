@@ -2,12 +2,12 @@
 
 declare module 'h3' {
   interface H3EventContext {
-    cf: CfProperties;
+    cf: CfProperties
     cloudflare: {
-      request: Request;
-      env: Env;
-      context: ExecutionContext;
-    };
+      request: Request
+      env: Env
+      context: ExecutionContext
+    }
   }
 }
 
