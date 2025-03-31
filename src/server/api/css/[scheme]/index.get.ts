@@ -6,6 +6,6 @@ export default defineEventHandler(async (event) => {
     return;
   }
 
-  const color = hctToURL();
+  const color = colorToURL(); // random
   await sendRedirect(event, joinURL(event.path, color), 302);
 });

@@ -17,7 +17,7 @@ definePageMeta({
 });
 
 const $route = useRoute();
-const { param: primaryParam, color: themeColor } = useColorParam($route.params.primary);
+const { param: primaryParam, color: themeColor } = getColorParam($route.params.primary);
 
 if (themeColor === undefined || $route.path.endsWith('/')) {
   throw createError({

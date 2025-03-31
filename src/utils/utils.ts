@@ -1,6 +1,6 @@
 export {
+  colorToURL,
+  getColorParam,
+  getThemeSchemeParam,
   hct,
-  hctToURL,
-  useColorParam,
-  useThemeSchemeParam,
 } from '~/shared/utils/colors';

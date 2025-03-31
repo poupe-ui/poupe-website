@@ -6,12 +6,12 @@ import {
 } from '@poupe/theme-builder';
 
 import {
-  useColorParam,
-  useThemeSchemeParam,
+  getColorParam,
+  getThemeSchemeParam,
 } from '~/shared/utils/colors';
 
 export {
-  hctToURL,
+  colorToURL,
 } from '~/shared/utils/colors';
 
 export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, param: string, opts: {
@@ -19,7 +19,7 @@ export function themeSchemeFromRouterParam(event: H3Event<EventHandlerRequest>, 
   decode?: boolean
 } = {}) {
   const s = getRouterParam(event, param, opts);
-  const { scheme } = useThemeSchemeParam(s);
+  const { scheme } = getThemeSchemeParam(s);
 
   return {
     param: s,
@@ -34,7 +34,7 @@ export function themeColorFromRouterParam(event: H3Event<EventHandlerRequest>, p
   const s = getRouterParam(event, param, opts);
   let out: typeof opts.fallback;
 
-  const { color: hex } = useColorParam(s);
+  const { color: hex } = getColorParam(s);
   if (hex !== undefined) {
     out = hct(hex);
   }

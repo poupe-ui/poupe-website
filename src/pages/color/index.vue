@@ -2,7 +2,7 @@
 await navigateTo({
   name: 'color-primary',
   params: {
-    primary: hctToURL(),
+    primary: colorToURL(), // random
   },
 }, {
   redirectCode: 302,
