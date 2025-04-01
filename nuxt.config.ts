@@ -50,6 +50,7 @@ export default defineNuxtConfig({
     colors: {
       primary: '#caae88',
     },
+    prefix: 'p-',
     omitTheme: true,
   },
 
