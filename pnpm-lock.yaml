@@ -12,8 +12,8 @@ importers:
         specifier: ^1.2.2
         version: 1.2.2
       '@pinia/nuxt':
-        specifier: ^0.9.0
-        version: 0.9.0(magicast@0.3.5)(pinia@2.3.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))
+        specifier: ^0.10.1
+        version: 0.10.1(magicast@0.3.5)(pinia@2.3.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))
       '@poupe/theme-builder':
         specifier: ^0.6.0
         version: 0.6.0
@@ -76,8 +76,8 @@ importers:
         specifier: ^0.2.2
         version: 0.2.2
       nuxt-svgo:
-        specifier: ^4.0.16
-        version: 4.0.16(magicast@0.3.5)(vue@3.5.13(typescript@5.8.2))
+        specifier: ^4.0.17
+        version: 4.0.17(magicast@0.3.5)(vue@3.5.13(typescript@5.8.2))
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17
@@ -893,8 +893,8 @@ packages:
   '@microsoft/tsdoc@0.15.1':
     resolution: {integrity: sha512-4aErSrCR/On/e5G2hDP0wjooqDdauzEbIq8hIkIe5pXV0rtWJZvdCEKL0ykZxex+IxIwBp0eGeV48hQN07dXtw==}
 
-  '@napi-rs/wasm-runtime@0.2.7':
-    resolution: {integrity: sha512-5yximcFK5FNompXfJFoWanu5l8v1hNGqNHh9du1xETp9HWk/B/PzvchX55WYOPaIeNglG8++68AAiauBAtbnzw==}
+  '@napi-rs/wasm-runtime@0.2.8':
+    resolution: {integrity: sha512-OBlgKdX7gin7OIq4fadsjpg+cp2ZphvAIKucHsNfTdJiqdOmOEwQd/bHi0VwNrcw5xpBJyUw6cK/QilCqy1BSg==}
 
   '@netlify/functions@3.0.4':
     resolution: {integrity: sha512-Ox8+ABI+nsLK+c4/oC5dpquXuEIjzfTlJrdQKgQijCsDQoje7inXFAtKDLvvaGvuvE+PVpMLwQcIUL6P9Ob1hQ==}
@@ -1161,10 +1161,10 @@ packages:
     resolution: {integrity: sha512-dfUnCxiN9H4ap84DvD2ubjw+3vUNpstxa0TneY/Paat8a3R4uQZDLSvWjmznAY/DoahqTHl9V46HF/Zs3F29pg==}
     engines: {node: '>= 10.0.0'}
 
-  '@pinia/nuxt@0.9.0':
-    resolution: {integrity: sha512-2yeRo7LeyCF68AbNeL3xu2h6uw0617RkcsYxmA8DJM0R0PMdz5wQHnc44KeENQxR/Mrq8T910XVT6buosqsjBQ==}
+  '@pinia/nuxt@0.10.1':
+    resolution: {integrity: sha512-xrpkKZHSmshPK6kQzboJ+TZiZ5zj73gBCI5SfiUaJkKKS9gx4B1hLEzJIjxZl0/HS5jRWrIvQ+u9ulvIRlNiow==}
     peerDependencies:
-      pinia: ^2.3.0
+      pinia: ^3.0.1
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -3313,8 +3313,8 @@ packages:
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
-  nuxt-svgo@4.0.16:
-    resolution: {integrity: sha512-RxH/UNjM9glOOUrDrA2isNK5E1JadAdYlvJErsrAuUoPrHIck9IXZNW2a76q09nvflfr2dEQ43QM174Nyg6EhQ==}
+  nuxt-svgo@4.0.17:
+    resolution: {integrity: sha512-AYgqn8z6AZppN7i9CCPsDIOBa9CcBDrxF43wmErYNgKvF402DEHOOQ4lGimVwn5ELpgB4K3TTia7shWXNQtw1g==}
     peerDependencies:
       svgo-loader: ^4.0.0
       vue: '>=3.2.13'
@@ -4248,8 +4248,8 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
-  type-fest@4.38.0:
-    resolution: {integrity: sha512-2dBz5D5ycHIoliLYLi0Q2V7KRaDlH0uWIvmk7TYlAg5slqwiPv1ezJdZm1QEM0xgk29oYWMCbIG7E6gHpvChlg==}
+  type-fest@4.39.0:
+    resolution: {integrity: sha512-w2IGJU1tIgcrepg9ZJ82d8UmItNQtOFJG0HCUE3SzMokKkTsruVDALl2fAdiEzJlfduoU+VyXJWIIUZ+6jV+nw==}
     engines: {node: '>=16'}
 
   type-is@1.6.18:
@@ -5455,7 +5455,7 @@ snapshots:
 
   '@microsoft/tsdoc@0.15.1': {}
 
-  '@napi-rs/wasm-runtime@0.2.7':
+  '@napi-rs/wasm-runtime@0.2.8':
     dependencies:
       '@emnapi/core': 1.4.0
       '@emnapi/runtime': 1.4.0
@@ -5871,7 +5871,7 @@ snapshots:
 
   '@oxc-parser/binding-wasm32-wasi@0.56.5':
     dependencies:
-      '@napi-rs/wasm-runtime': 0.2.7
+      '@napi-rs/wasm-runtime': 0.2.8
     optional: true
 
   '@oxc-parser/binding-win32-arm64-msvc@0.56.5':
@@ -5953,7 +5953,7 @@ snapshots:
       '@parcel/watcher-win32-ia32': 2.5.1
       '@parcel/watcher-win32-x64': 2.5.1
 
-  '@pinia/nuxt@0.9.0(magicast@0.3.5)(pinia@2.3.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))':
+  '@pinia/nuxt@0.10.1(magicast@0.3.5)(pinia@2.3.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))':
     dependencies:
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
       pinia: 2.3.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))
@@ -6001,7 +6001,7 @@ snapshots:
       '@material/material-color-utilities': 0.3.0
       colord: 2.9.3
       tailwindcss: 3.4.17
-      type-fest: 4.38.0
+      type-fest: 4.39.0
     transitivePeerDependencies:
       - ts-node
 
@@ -6301,7 +6301,7 @@ snapshots:
 
   '@unrs/resolver-binding-wasm32-wasi@1.3.3':
     dependencies:
-      '@napi-rs/wasm-runtime': 0.2.7
+      '@napi-rs/wasm-runtime': 0.2.8
     optional: true
 
   '@unrs/resolver-binding-win32-arm64-msvc@1.3.3':
@@ -7071,7 +7071,7 @@ snapshots:
 
   dot-prop@9.0.0:
     dependencies:
-      type-fest: 4.38.0
+      type-fest: 4.39.0
 
   dotenv@16.4.7: {}
 
@@ -8312,7 +8312,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nuxt-svgo@4.0.16(magicast@0.3.5)(vue@3.5.13(typescript@5.8.2)):
+  nuxt-svgo@4.0.17(magicast@0.3.5)(vue@3.5.13(typescript@5.8.2)):
     dependencies:
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
       mini-svg-data-uri: 1.4.4
@@ -8559,7 +8559,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.26.2
       index-to-position: 1.0.0
-      type-fest: 4.38.0
+      type-fest: 4.39.0
 
   parse-path@7.0.1:
     dependencies:
@@ -8882,14 +8882,14 @@ snapshots:
     dependencies:
       find-up-simple: 1.0.1
       read-pkg: 9.0.1
-      type-fest: 4.38.0
+      type-fest: 4.39.0
 
   read-pkg@9.0.1:
     dependencies:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 6.0.2
       parse-json: 8.2.0
-      type-fest: 4.38.0
+      type-fest: 4.39.0
       unicorn-magic: 0.1.0
 
   readable-stream@2.3.8:
@@ -9423,7 +9423,7 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
-  type-fest@4.38.0: {}
+  type-fest@4.39.0: {}
 
   type-is@1.6.18:
     dependencies:
