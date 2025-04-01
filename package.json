@@ -36,7 +36,7 @@
     "eslint": "^9.23.0",
     "h3": "^1.15.1",
     "nitro-cloudflare-dev": "^0.2.2",
-    "nuxt-svgo": "^4.0.16",
+    "nuxt-svgo": "^4.0.17",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.29.0",
