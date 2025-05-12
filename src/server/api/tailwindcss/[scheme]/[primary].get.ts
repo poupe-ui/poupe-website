@@ -18,6 +18,7 @@ function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptio
     scheme: opt.scheme,
     lightSuffix: '',
     darkSuffix: '',
+    forV3: true,
   });
 
   setResponseHeaders(event, {
