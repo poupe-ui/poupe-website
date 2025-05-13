@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  pinia@2.3.1:
+    hash: 35e3b8702e68ef42829e8cfb6c8b985dcd182ff4f244370b5b194e0638253002
+    path: patches/pinia@2.3.1.patch
+
 importers:
 
   .:
@@ -13,7 +18,7 @@ importers:
         version: 1.2.2
       '@pinia/nuxt':
         specifier: ^0.9.0
-        version: 0.9.0(magicast@0.3.5)(pinia@2.3.1(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3)))
+        version: 0.9.0(magicast@0.3.5)(pinia@2.3.1(patch_hash=35e3b8702e68ef42829e8cfb6c8b985dcd182ff4f244370b5b194e0638253002)(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3)))
       '@poupe/nuxt':
         specifier: ^0.2.7
         version: 0.2.7(@poupe/tailwindcss@0.2.6(@poupe/theme-builder@0.6.10))(magicast@0.3.5)(react@19.1.0)(typescript@5.8.3)(vite@6.2.4(@types/node@22.10.6)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
@@ -31,7 +36,7 @@ importers:
         version: 3.16.2(@parcel/watcher@2.5.1)(@types/node@22.10.6)(db0@0.3.1)(eslint@9.26.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.38.0)(terser@5.39.0)(typescript@5.8.3)(vite@6.2.4(@types/node@22.10.6)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
       pinia:
         specifier: ^2.3.1
-        version: 2.3.1(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3))
+        version: 2.3.1(patch_hash=35e3b8702e68ef42829e8cfb6c8b985dcd182ff4f244370b5b194e0638253002)(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3))
       reka-ui:
         specifier: 2.1.1
         version: 2.1.1(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3))
@@ -6059,10 +6064,10 @@ snapshots:
       '@parcel/watcher-win32-ia32': 2.5.1
       '@parcel/watcher-win32-x64': 2.5.1
 
-  '@pinia/nuxt@0.9.0(magicast@0.3.5)(pinia@2.3.1(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3)))':
+  '@pinia/nuxt@0.9.0(magicast@0.3.5)(pinia@2.3.1(patch_hash=35e3b8702e68ef42829e8cfb6c8b985dcd182ff4f244370b5b194e0638253002)(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3)))':
     dependencies:
       '@nuxt/kit': 3.17.3(magicast@0.3.5)
-      pinia: 2.3.1(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3))
+      pinia: 2.3.1(patch_hash=35e3b8702e68ef42829e8cfb6c8b985dcd182ff4f244370b5b194e0638253002)(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3))
     transitivePeerDependencies:
       - magicast
 
@@ -8842,7 +8847,7 @@ snapshots:
 
   pify@2.3.0: {}
 
-  pinia@2.3.1(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3)):
+  pinia@2.3.1(patch_hash=35e3b8702e68ef42829e8cfb6c8b985dcd182ff4f244370b5b194e0638253002)(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3)):
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.13(typescript@5.8.3)
