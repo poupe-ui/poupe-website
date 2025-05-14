@@ -1,50 +1,45 @@
 import {
-  type Hct,
-  type StandardDynamicSchemeKey,
+  type Theme,
 
-  formatCSSRuleObjects,
-  makeCSSTheme,
-} from '@poupe/theme-builder/tailwind';
+  makeThemeBases,
+  makeThemeFromPartialOptions,
+} from '@poupe/tailwindcss/theme';
 
-interface ThemeOptions {
-  primary: Hct
-  scheme: StandardDynamicSchemeKey
-}
+import {
+  stringifyCSSRules,
+} from '@poupe/css';
 
-function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptions) {
-  const { styles } = makeCSSTheme({
-    primary: opt.primary,
-  }, {
-    scheme: opt.scheme,
-    lightSuffix: '',
-    darkSuffix: '',
-    forV3: true,
-  });
+function handleThemeRequest(event: H3Event<EventHandlerRequest>, theme: Theme) {
+  const bases = makeThemeBases(theme);
 
   setResponseHeaders(event, {
     'content-type': 'text/css; charset=utf-8',
     'cache-control': 'max-age=86400', // 24 hours
   });
 
-  return formatCSSRuleObjects(styles);
+  return stringifyCSSRules(...bases);
 };
 
 export default defineEventHandler((event) => {
   const { scheme } = themeSchemeFromRouterParam(event, 'scheme');
-  const { param: primaryParam, color: primary, hex } = themeColorFromRouterParam(event, 'primary');
+  const { param: primaryParam, color: primary, hex: primaryHex } = themeColorFromRouterParam(event, 'primary');
 
-  if (scheme === undefined || primary === undefined || hex === undefined || event.path.endsWith('/')) {
+  if (scheme === undefined || primary === undefined || primaryHex === undefined || event.path.endsWith('/')) {
     setResponseStatus(event, 404);
     return;
-  } else if (hex !== `#${primaryParam}`) {
-    sendRedirect(event, `./${hex.slice(1)}`, 308);
+  } else if (primaryHex !== `#${primaryParam}`) {
+    sendRedirect(event, `./${primaryHex.slice(1)}`, 308);
     return;
   }
 
-  const opt: ThemeOptions = {
-    primary,
+  const theme = makeThemeFromPartialOptions({
+    colors: {
+      primary: primaryHex,
+    },
     scheme,
-  };
+    lightSuffix: '',
+    darkSuffix: '',
+  });
 
-  return handleThemeRequest(event, opt as ThemeOptions);
+  return handleThemeRequest(event, theme);
 });

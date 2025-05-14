@@ -42,10 +42,12 @@ export default defineNuxtConfig({
   },
 
   poupe: {
-    colors: {
-      primary: '#caae88',
+    theme: {
+      colors: {
+        primary: '#caae88',
+      },
+      omitTheme: true,
     },
-    omitTheme: true,
   },
 
   reka: {
