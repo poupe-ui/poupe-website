@@ -78,8 +78,8 @@ importers:
         specifier: ^1.12.0
         version: 1.12.0(magicast@0.3.5)(vite@6.2.4(@types/node@22.10.6)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
       '@poupe/eslint-config':
-        specifier: ^0.5.3
-        version: 0.5.3(jiti@2.4.2)(typescript@5.8.3)(vue-eslint-parser@10.1.3(eslint@9.26.0(jiti@2.4.2)))
+        specifier: ^0.6.3
+        version: 0.6.3(jiti@2.4.2)(typescript@5.8.3)(vue-eslint-parser@10.1.3(eslint@9.26.0(jiti@2.4.2)))
       eslint:
         specifier: ^9.26.0
         version: 9.26.0(jiti@2.4.2)
@@ -1055,8 +1055,8 @@ packages:
     resolution: {integrity: sha512-VrMh/0qJQxYOx2WPJ1+EPFR3KKpwIAn0hWuWZKgFB9Bl+EEyXojniUw8T3ja5cmmQv49nOqZiEieUsomBi2Hug==}
     engines: {node: '>= 20.19.1', pnpm: '>= 10.10.0'}
 
-  '@poupe/eslint-config@0.5.3':
-    resolution: {integrity: sha512-unds/yAU+dGhyRNB80W4WSghQ4l8YQ7uM6WRzocxgLFaBhLjOqFOy0x/2AIkCkRG2sViIzB52uoE/4cH61+qiA==}
+  '@poupe/eslint-config@0.6.3':
+    resolution: {integrity: sha512-EPTFBhMH4+VhpXQ808D6YjyqV1wb9t5TYXGiNliV4s4hJdQoUgHefnP7IvLGAgNden2sypAunxTfsfnTlrT9aA==}
     engines: {node: '>= 18.20.8', pnpm: '>= 10.10.0'}
 
   '@poupe/nuxt@0.3.0':
@@ -5853,7 +5853,7 @@ snapshots:
 
   '@poupe/css@0.2.0': {}
 
-  '@poupe/eslint-config@0.5.3(jiti@2.4.2)(typescript@5.8.3)(vue-eslint-parser@10.1.3(eslint@9.26.0(jiti@2.4.2)))':
+  '@poupe/eslint-config@0.6.3(jiti@2.4.2)(typescript@5.8.3)(vue-eslint-parser@10.1.3(eslint@9.26.0(jiti@2.4.2)))':
     dependencies:
       '@eslint/js': 9.26.0
       '@stylistic/eslint-plugin': 4.2.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
