@@ -18,7 +18,7 @@
     "@poupe/nuxt": "^0.3.0",
     "@poupe/tailwindcss": "^0.3.2",
     "@poupe/theme-builder": "^0.8.2",
-    "@vueuse/core": "^13.1.0",
+    "@vueuse/core": "^13.2.0",
     "colord": "^2.9.3",
     "nuxt": "^3.16.2",
     "pinia": "^2.3.1",
