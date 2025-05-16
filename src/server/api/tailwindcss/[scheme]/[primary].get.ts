@@ -6,11 +6,15 @@ import {
 } from '@poupe/tailwindcss/theme';
 
 import {
+  rgbaString,
+} from '@poupe/theme-builder/core';
+
+import {
   stringifyCSSRules,
 } from '@poupe/css';
 
 function handleThemeRequest(event: H3Event<EventHandlerRequest>, theme: Theme) {
-  const bases = makeThemeBases(theme);
+  const bases = makeThemeBases(theme, 'class', rgbaString);
 
   setResponseHeaders(event, {
     'content-type': 'text/css; charset=utf-8',

@@ -29,8 +29,8 @@ importers:
         specifier: ^0.3.2
         version: 0.3.2
       '@poupe/theme-builder':
-        specifier: ^0.8.1
-        version: 0.8.1
+        specifier: ^0.8.2
+        version: 0.8.2
       '@vueuse/core':
         specifier: ^13.1.0
         version: 13.2.0(vue@3.5.14(typescript@5.8.3))
@@ -1091,8 +1091,8 @@ packages:
     resolution: {integrity: sha512-E7jllGeebsVLtm+ZUxmffHBV04ANteO2SFD2PpA/J+tmBzo8Kq5OKe3gig8rgehQcIF/iUgHCPnApFLSueESbQ==}
     engines: {node: '>= 20.19.1', pnpm: '>= 10.10.0'}
 
-  '@poupe/theme-builder@0.8.1':
-    resolution: {integrity: sha512-laavb17hrmrHExu05IeQQMYL5/g+0WSFBjPfnSEsweTOxqhlL3ndHO5NP/sMigqXLIHG+YoMkWD11fRks6g8tw==}
+  '@poupe/theme-builder@0.8.2':
+    resolution: {integrity: sha512-DIIdw9n8CBAFhtJd7cc9mhTmbTKyYq3QtJjvVbmNIH5x8mhA6c0nJmbfg8TQ2FKsWBQwBppY2WkpAlfQ9Pt+ug==}
     engines: {node: '>= 20.19.1', pnpm: '>= 10.10.0'}
 
   '@poupe/vue@0.4.1':
@@ -5942,7 +5942,7 @@ snapshots:
   '@poupe/tailwindcss@0.3.2':
     dependencies:
       '@poupe/css': 0.2.1
-      '@poupe/theme-builder': 0.8.1
+      '@poupe/theme-builder': 0.8.2
       tailwindcss: 4.1.7
       type-fest: 4.41.0
 
@@ -5954,7 +5954,7 @@ snapshots:
       tailwindcss: 4.1.7
       type-fest: 4.41.0
 
-  '@poupe/theme-builder@0.8.1':
+  '@poupe/theme-builder@0.8.2':
     dependencies:
       '@material/material-color-utilities': 0.3.0
       '@poupe/css': 0.2.1
