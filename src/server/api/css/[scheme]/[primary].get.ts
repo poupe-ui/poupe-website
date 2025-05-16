@@ -2,7 +2,7 @@ import {
   type Hct,
   type StandardDynamicSchemeKey,
 
-  formatCSSRuleObjects,
+  formatCSSRulesArray,
   makeCSSTheme,
 } from '@poupe/theme-builder';
 
@@ -25,7 +25,10 @@ function handleThemeRequest(event: H3Event<EventHandlerRequest>, opt: ThemeOptio
     'cache-control': 'max-age=86400', // 24 hours
   });
 
-  return formatCSSRuleObjects(styles);
+  return [
+    ...formatCSSRulesArray(styles),
+    '',
+  ].join('\n');
 };
 
 export default defineEventHandler((event) => {

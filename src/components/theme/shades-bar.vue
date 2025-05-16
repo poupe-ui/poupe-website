@@ -9,7 +9,6 @@
       :key="shade"
     >
       <div
-        v-if="shade !== 'DEFAULT'"
         class="h-10 w-10"
         :style="`background-color:${hexShade}`"
       />
@@ -22,12 +21,17 @@ import {
   type Hct,
 
   hexFromHct,
-  withHexShades,
-} from '@poupe/theme-builder/tailwind';
+} from '@poupe/theme-builder/core';
+
+import {
+  type Shades,
+  makeHexShades,
+} from '@poupe/tailwindcss/theme';
 
 const props = defineProps<{
   modelValue: Hct
 }>();
-const hexColor = computed(() => hexFromHct(props.modelValue));
-const shades = computed(() => withHexShades(props.modelValue));
+
+const hexColor = computed<string>(() => hexFromHct(props.modelValue));
+const shades = computed<Shades>(() => makeHexShades(props.modelValue));
 </script>
