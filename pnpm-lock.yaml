@@ -23,8 +23,8 @@ importers:
         specifier: ^0.2.0
         version: 0.2.1
       '@poupe/nuxt':
-        specifier: ^0.3.1
-        version: 0.3.1(magicast@0.3.5)(react@19.1.0)(typescript@5.8.3)(vite@6.2.4(@types/node@22.10.6)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.14(typescript@5.8.3))
+        specifier: ^0.3.2
+        version: 0.3.2(magicast@0.3.5)(react@19.1.0)(typescript@5.8.3)(vite@6.2.4(@types/node@22.10.6)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.14(typescript@5.8.3))
       '@poupe/tailwindcss':
         specifier: ^0.3.3
         version: 0.3.3
@@ -44,8 +44,8 @@ importers:
         specifier: ^2.3.1
         version: 2.3.1(patch_hash=35e3b8702e68ef42829e8cfb6c8b985dcd182ff4f244370b5b194e0638253002)(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))
       reka-ui:
-        specifier: 2.1.1
-        version: 2.1.1(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))
+        specifier: 2.2.1
+        version: 2.2.1(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))
       tailwind-scrollbar:
         specifier: ^4.0.2
         version: 4.0.2(react@19.1.0)(tailwindcss@4.1.7)
@@ -1062,8 +1062,8 @@ packages:
     resolution: {integrity: sha512-EPTFBhMH4+VhpXQ808D6YjyqV1wb9t5TYXGiNliV4s4hJdQoUgHefnP7IvLGAgNden2sypAunxTfsfnTlrT9aA==}
     engines: {node: '>= 18.20.8', pnpm: '>= 10.10.0'}
 
-  '@poupe/nuxt@0.3.1':
-    resolution: {integrity: sha512-KoqeSP9APUPRqVQ08lMnIX27KKmf3X0z/CussvsIpuLLv3rs7PfA2BCh9oZ10pFcCeBN3Uex6WnVIs4cp8KgYg==}
+  '@poupe/nuxt@0.3.2':
+    resolution: {integrity: sha512-CjD++wLiCc3KQi5R48WyW1UAeTlffmFImWlicigKPBOgNm7ZTRjOqibeW1dKCe3o3HoNUz64S3RMWB1aQsaQCw==}
     engines: {node: '>=20.19.1', pnpm: '>=10.10.0'}
 
   '@poupe/tailwindcss@0.3.3':
@@ -1074,11 +1074,9 @@ packages:
     resolution: {integrity: sha512-DIIdw9n8CBAFhtJd7cc9mhTmbTKyYq3QtJjvVbmNIH5x8mhA6c0nJmbfg8TQ2FKsWBQwBppY2WkpAlfQ9Pt+ug==}
     engines: {node: '>= 20.19.1', pnpm: '>= 10.10.0'}
 
-  '@poupe/vue@0.4.1':
-    resolution: {integrity: sha512-Lo02PoLH0WhdNX/RSNuGmtJGydRcFLZWW6RcOG6tBcUf7rwsGHV4XQZIGVtatUVe11AOSOuF3rdxLfmrYCkgTQ==}
-    peerDependencies:
-      '@poupe/tailwindcss': ^0.2.5
-      '@poupe/theme-builder': ^0.7.0
+  '@poupe/vue@0.4.2':
+    resolution: {integrity: sha512-PPZuMK6nDRqiSk7K7adAyjEMjXLvIXnZgu2Ktz/h0YzBY4VX5egK6rxOfIBeuoQD4WH2nXyFIjybNJ3dXwhBDw==}
+    engines: {node: '>=20.19.1', pnpm: '>=10.10.0'}
 
   '@rollup/plugin-alias@5.1.1':
     resolution: {integrity: sha512-PR9zDb+rOzkRb2VD+EuKB7UC41vU5DIwZ5qqCpk0KJudcWAyi8rvYOhS7+L5aZCspw1stTViLgN5v6FF1p5cgQ==}
@@ -3760,11 +3758,6 @@ packages:
     resolution: {integrity: sha512-cnE+y8bz4NhMjISKbgeVJtqNbtf5QpjZP+Bslo+UqkIt9QPnX9q095eiRRASJG1/tz6dlNr6Z5NsBiWYokp6EQ==}
     hasBin: true
 
-  reka-ui@2.1.1:
-    resolution: {integrity: sha512-awvpQ041LPXAvf2uRVFwedsyz9SwsuoWlRql1fg4XimUCxEI2GOfHo6FIdL44dSPb/eG/gWbdGhoGHLlbX5gPA==}
-    peerDependencies:
-      vue: '>= 3.2.0'
-
   reka-ui@2.2.1:
     resolution: {integrity: sha512-oLHiyBn6gTIQGnTnv8G5LQuFp9j8HuUNl0qdnW3XPhFb/07hrxzFpjo2kt/jxOZive+n/XWDbOjSj2h9Hih3qA==}
     peerDependencies:
@@ -5873,14 +5866,14 @@ snapshots:
       - typescript
       - vue-eslint-parser
 
-  '@poupe/nuxt@0.3.1(magicast@0.3.5)(react@19.1.0)(typescript@5.8.3)(vite@6.2.4(@types/node@22.10.6)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.14(typescript@5.8.3))':
+  '@poupe/nuxt@0.3.2(magicast@0.3.5)(react@19.1.0)(typescript@5.8.3)(vite@6.2.4(@types/node@22.10.6)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.14(typescript@5.8.3))':
     dependencies:
       '@nuxt/icon': 1.12.0(magicast@0.3.5)(vite@6.2.4(@types/node@22.10.6)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.14(typescript@5.8.3))
       '@nuxtjs/color-mode': 3.5.2(magicast@0.3.5)
       '@poupe/css': 0.2.1
       '@poupe/tailwindcss': 0.3.3
       '@poupe/theme-builder': 0.8.2
-      '@poupe/vue': 0.4.1(@poupe/tailwindcss@0.3.3)(@poupe/theme-builder@0.8.2)(react@19.1.0)(typescript@5.8.3)
+      '@poupe/vue': 0.4.2(react@19.1.0)(typescript@5.8.3)
       '@tailwindcss/vite': 4.1.7(vite@6.2.4(@types/node@22.10.6)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))
       consola: 3.4.2
       std-env: 3.9.0
@@ -5911,7 +5904,7 @@ snapshots:
       defu: 6.1.4
       type-fest: 4.41.0
 
-  '@poupe/vue@0.4.1(@poupe/tailwindcss@0.3.3)(@poupe/theme-builder@0.8.2)(react@19.1.0)(typescript@5.8.3)':
+  '@poupe/vue@0.4.2(react@19.1.0)(typescript@5.8.3)':
     dependencies:
       '@iconify-json/svg-spinners': 1.2.2
       '@iconify/vue': 5.0.0(vue@3.5.14(typescript@5.8.3))
@@ -8800,23 +8793,6 @@ snapshots:
   regjsparser@0.12.0:
     dependencies:
       jsesc: 3.0.2
-
-  reka-ui@2.1.1(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)):
-    dependencies:
-      '@floating-ui/dom': 1.7.0
-      '@floating-ui/vue': 1.1.6(vue@3.5.14(typescript@5.8.3))
-      '@internationalized/date': 3.8.0
-      '@internationalized/number': 3.6.1
-      '@tanstack/vue-virtual': 3.13.8(vue@3.5.14(typescript@5.8.3))
-      '@vueuse/core': 12.8.2(typescript@5.8.3)
-      '@vueuse/shared': 12.8.2(typescript@5.8.3)
-      aria-hidden: 1.2.4
-      defu: 6.1.4
-      ohash: 2.0.11
-      vue: 3.5.14(typescript@5.8.3)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - typescript
 
   reka-ui@2.2.1(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)):
     dependencies:
