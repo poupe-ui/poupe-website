@@ -14,7 +14,7 @@
   "dependencies": {
     "@iconify-json/heroicons": "^1.2.2",
     "@pinia/nuxt": "^0.9.0",
-    "@poupe/css": "^0.2.0",
+    "@poupe/css": "^0.2.2",
     "@poupe/nuxt": "^0.3.2",
     "@poupe/tailwindcss": "^0.3.3",
     "@poupe/theme-builder": "^0.8.2",
