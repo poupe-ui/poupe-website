@@ -6,9 +6,7 @@
     "build": "nuxt build",
     "lint": "env DEBUG=eslint:eslint eslint --fix .",
     "dev": "nuxt dev",
-    "preview": "pnpm run build && wrangler pages dev",
-    "cf-deploy": "pnpm run build && wrangler pages deploy",
-    "cf-typegen": "wrangler types",
+    "preview": "pnpm run build && wrangler dev",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
