@@ -27,7 +27,7 @@ importers:
         version: 0.3.5(magicast@0.3.5)(react@19.1.0)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.2)(yaml@2.8.0))(vue@3.5.15(typescript@5.8.3))
       '@poupe/tailwindcss':
         specifier: ^0.3.10
-        version: 0.3.10(tailwindcss@4.1.7)
+        version: 0.3.10(tailwindcss@4.1.8)
       '@poupe/theme-builder':
         specifier: ^0.9.0
         version: 0.9.0
@@ -48,10 +48,10 @@ importers:
         version: 2.2.1(typescript@5.8.3)(vue@3.5.15(typescript@5.8.3))
       tailwind-scrollbar:
         specifier: ^4.0.2
-        version: 4.0.2(react@19.1.0)(tailwindcss@4.1.7)
+        version: 4.0.2(react@19.1.0)(tailwindcss@4.1.8)
       tailwindcss:
-        specifier: ^4.1.6
-        version: 4.1.7
+        specifier: ^4.1.8
+        version: 4.1.8
       ufo:
         specifier: ^1.6.1
         version: 1.6.1
@@ -4378,6 +4378,9 @@ packages:
   tailwindcss@4.1.7:
     resolution: {integrity: sha512-kr1o/ErIdNhTz8uzAYL7TpaUuzKIE6QPQ4qmSdxnoX/lo+5wmUHQA6h3L5yIqEImSRnAAURDirLu/BgiXGPAhg==}
 
+  tailwindcss@4.1.8:
+    resolution: {integrity: sha512-kjeW8gjdxasbmFKpVGrGd5T4i40mV5J2Rasw48QARfYeQ8YS9x02ON9SFWax3Qf616rt4Cp3nVNIj6Hd1mP3og==}
+
   tapable@2.2.2:
     resolution: {integrity: sha512-Re10+NauLTMCudc7T5WLFLAwDhQ0JWdrMK+9B2M8zR5hRExKmsRDCBA7/aV/pNJFltmBFO5BAMlQFi/vq3nKOg==}
     engines: {node: '>=6'}
@@ -6244,15 +6247,15 @@ snapshots:
       '@nuxt/icon': 1.13.0(magicast@0.3.5)(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.2)(yaml@2.8.0))(vue@3.5.15(typescript@5.8.3))
       '@nuxtjs/color-mode': 3.5.2(magicast@0.3.5)
       '@poupe/css': 0.2.4
-      '@poupe/tailwindcss': 0.3.10(tailwindcss@4.1.7)
+      '@poupe/tailwindcss': 0.3.10(tailwindcss@4.1.8)
       '@poupe/theme-builder': 0.9.0
       '@poupe/vue': 0.4.4(react@19.1.0)(typescript@5.8.3)
       '@tailwindcss/vite': 4.1.7(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.2)(yaml@2.8.0))
       consola: 3.4.2
       std-env: 3.9.0
       stringify-object: 5.0.0
-      tailwind-scrollbar: 4.0.2(react@19.1.0)(tailwindcss@4.1.7)
-      tailwindcss: 4.1.7
+      tailwind-scrollbar: 4.0.2(react@19.1.0)(tailwindcss@4.1.8)
+      tailwindcss: 4.1.8
     transitivePeerDependencies:
       - '@vue/composition-api'
       - magicast
@@ -6262,11 +6265,11 @@ snapshots:
       - vite
       - vue
 
-  '@poupe/tailwindcss@0.3.10(tailwindcss@4.1.7)':
+  '@poupe/tailwindcss@0.3.10(tailwindcss@4.1.8)':
     dependencies:
       '@poupe/css': 0.2.4
       '@poupe/theme-builder': 0.9.0
-      tailwindcss: 4.1.7
+      tailwindcss: 4.1.8
       type-fest: 4.41.0
 
   '@poupe/theme-builder@0.9.0':
@@ -6281,14 +6284,14 @@ snapshots:
     dependencies:
       '@iconify-json/svg-spinners': 1.2.2
       '@iconify/vue': 5.0.0(vue@3.5.15(typescript@5.8.3))
-      '@poupe/tailwindcss': 0.3.10(tailwindcss@4.1.7)
+      '@poupe/tailwindcss': 0.3.10(tailwindcss@4.1.8)
       '@poupe/theme-builder': 0.9.0
       '@unhead/vue': 2.0.10(vue@3.5.15(typescript@5.8.3))
       reka-ui: 2.2.1(typescript@5.8.3)(vue@3.5.15(typescript@5.8.3))
       tailwind-merge: 3.3.0
-      tailwind-scrollbar: 4.0.2(react@19.1.0)(tailwindcss@4.1.7)
-      tailwind-variants: 1.0.0(tailwindcss@4.1.7)
-      tailwindcss: 4.1.7
+      tailwind-scrollbar: 4.0.2(react@19.1.0)(tailwindcss@4.1.8)
+      tailwind-variants: 1.0.0(tailwindcss@4.1.8)
+      tailwindcss: 4.1.8
       vue: 3.5.15(typescript@5.8.3)
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -9807,19 +9810,21 @@ snapshots:
 
   tailwind-merge@3.3.0: {}
 
-  tailwind-scrollbar@4.0.2(react@19.1.0)(tailwindcss@4.1.7):
+  tailwind-scrollbar@4.0.2(react@19.1.0)(tailwindcss@4.1.8):
     dependencies:
       prism-react-renderer: 2.4.1(react@19.1.0)
-      tailwindcss: 4.1.7
+      tailwindcss: 4.1.8
     transitivePeerDependencies:
       - react
 
-  tailwind-variants@1.0.0(tailwindcss@4.1.7):
+  tailwind-variants@1.0.0(tailwindcss@4.1.8):
     dependencies:
       tailwind-merge: 3.0.2
-      tailwindcss: 4.1.7
+      tailwindcss: 4.1.8
 
   tailwindcss@4.1.7: {}
+
+  tailwindcss@4.1.8: {}
 
   tapable@2.2.2: {}
 
