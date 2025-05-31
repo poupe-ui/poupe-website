@@ -1,13 +1,15 @@
 <template>
-  <div class="flex w-screen justify-center">
-    <theme-card
-      v-if="primary"
-      :title="`Hello, ${themeColor}`"
-    >
-      <div class="flex justify-center">
-        <theme-shades-bar v-model="primary" />
-      </div>
-    </theme-card>
+  <div class="flex flex-1 h-screen justify-center items-center">
+    <div class="container">
+      <theme-card
+        v-if="primary"
+        :title="`Hello, ${themeColor}`"
+      >
+        <div class="flex justify-center">
+          <theme-shades-bar v-model="primary" />
+        </div>
+      </theme-card>
+    </div>
   </div>
 </template>
 

@@ -3,7 +3,7 @@ const { darkMode } = useTheme();
 
 useHead({
   bodyAttrs: {
-    class: 'bg-surface text-on-surface',
+    class: 'surface',
   },
   htmlAttrs: {
     class: {

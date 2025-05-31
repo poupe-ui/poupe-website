@@ -5,7 +5,10 @@ defineProps<{
 </script>
 
 <template>
-  <div class="surface-bright md:m-2 p-2 md:rounded md:shadow-shadow md:shadow-md">
+  <p-card
+    class="m-auto w-full max-w-2xl"
+    shadow="z2"
+  >
     <div class="flex justify-between items-center">
       <slot name="title">
         <h1
@@ -19,5 +22,5 @@ defineProps<{
     </div>
 
     <slot />
-  </div>
+  </p-card>
 </template>

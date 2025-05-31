@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-screen justify-center">
+  <div class="flex flex-1 h-screen justify-center items-center">
     <theme-card v-if="primary && scheme">
       <template #title>
         <h1 class="text-2xl font-bold capitalize">
