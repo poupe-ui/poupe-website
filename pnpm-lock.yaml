@@ -26,11 +26,11 @@ importers:
         specifier: ^0.3.5
         version: 0.3.5(magicast@0.3.5)(react@19.1.0)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.2)(yaml@2.8.0))(vue@3.5.15(typescript@5.8.3))
       '@poupe/tailwindcss':
-        specifier: ^0.3.10
-        version: 0.3.10(tailwindcss@4.1.7)
+        specifier: ^0.3.13
+        version: 0.3.13(tailwindcss@4.1.7)
       '@poupe/theme-builder':
         specifier: ^0.9.0
-        version: 0.9.0
+        version: 0.9.3
       '@vueuse/core':
         specifier: ^13.2.0
         version: 13.2.0(vue@3.5.15(typescript@5.8.3))
@@ -1096,25 +1096,29 @@ packages:
     resolution: {integrity: sha512-z4Hz+wmq6cdCoTPM07UJtzUYDoatryFpqE0PtrIHWxeWJ99PrcNpAIQNeN7s9WcrAuw0N79Y5xgCbJ9Ytk+yvw==}
     engines: {node: '>= 20.19.2', pnpm: '>= 10.10.0'}
 
+  '@poupe/css@0.3.0':
+    resolution: {integrity: sha512-vZItnNwUS7W96syMKAqHd0Da+kQ6Itf43QUER1RMFTD2cYd51951ooTM2a1fPAX2nBbQodfjlXpHp+xUVukj0w==}
+    engines: {node: '>= 20.19.2', pnpm: '>= 10.10.0'}
+
   '@poupe/eslint-config@0.6.4':
     resolution: {integrity: sha512-dpgKDPYwiVo5jisfoWKqsR126xOKyzPgukiFcIlCBVc2wn36fP4os2J2LVIjCKrc27EnZVlyCXZA0y6YWjO7+Q==}
     engines: {node: '>= 18.20.8', pnpm: '>= 10.10.0'}
 
-  '@poupe/material-color-utilities@0.3.4':
-    resolution: {integrity: sha512-IXeEu3k6uM4kiyIxW6fOWUbqwnPmM1Z+Uwh58Q3mGBLr2yfsk8/9fl6ogYPOlT0GEAUwWqHzqUOT06odDNTaWQ==}
+  '@poupe/material-color-utilities@0.3.5':
+    resolution: {integrity: sha512-K2T/itexWeEEraEMRkIeiIW7hRsWOBsY8KCvCkSnneZnDnXTvQ0pSwGWCZwVij9ETwPiFoiMTPhQQudNoc90Yw==}
 
   '@poupe/nuxt@0.3.5':
     resolution: {integrity: sha512-iLgCFnWJbR1FLDUUSeqc4JSV45s4POd8EeMao64UoNo6s5ZOjdt0WuytJRGYTbASaa/JvuLuDcjM6An9Rhj6kA==}
     engines: {node: '>=20.19.2', pnpm: '>=10.10.0'}
 
-  '@poupe/tailwindcss@0.3.10':
-    resolution: {integrity: sha512-qmZ69BWaQ+v+eNUUuJZ5brRfXYaTIH35JGBk4a1/9+Thy14i4476DchCymSIoHpt3EhhzKojKyIMGruOTIl8ow==}
+  '@poupe/tailwindcss@0.3.13':
+    resolution: {integrity: sha512-+68oGU70R/SS52ebYpBAeeRifaEFINfkbHv5MeTIhcMaFdXsRgOwm7YeoUbL4EbdTvDXmcVxialt4ZRFEe7JUQ==}
     engines: {node: '>=20.19.2', pnpm: '>=10.10.0'}
     peerDependencies:
-      tailwindcss: ^4.1
+      tailwindcss: ^4.1.8
 
-  '@poupe/theme-builder@0.9.0':
-    resolution: {integrity: sha512-Ix9E+BIbOrwi7cKOrYcLfv69DIydkEPS1GrrmY9MYyjedjWUfvaLGpZ7dUx4BdLhL2aosDqDo8XUxSS565E3Lw==}
+  '@poupe/theme-builder@0.9.3':
+    resolution: {integrity: sha512-vJbspH3QazlutCsd3QukEQYTxRUW6z4kzMAiLSaaOofEtG2TE/Hz7Y1WPZhqFDXV5cRcAQ8Q+h/FvHCrE9h1Nw==}
     engines: {node: '>= 20.19.2', pnpm: '>= 10.10.0'}
 
   '@poupe/vue@0.4.4':
@@ -6220,6 +6224,10 @@ snapshots:
     dependencies:
       defu: 6.1.4
 
+  '@poupe/css@0.3.0':
+    dependencies:
+      defu: 6.1.4
+
   '@poupe/eslint-config@0.6.4(jiti@2.4.2)(typescript@5.8.3)(vue-eslint-parser@10.1.3(eslint@9.27.0(jiti@2.4.2)))':
     dependencies:
       '@eslint/js': 9.27.0
@@ -6237,15 +6245,15 @@ snapshots:
       - typescript
       - vue-eslint-parser
 
-  '@poupe/material-color-utilities@0.3.4': {}
+  '@poupe/material-color-utilities@0.3.5': {}
 
   '@poupe/nuxt@0.3.5(magicast@0.3.5)(react@19.1.0)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.2)(yaml@2.8.0))(vue@3.5.15(typescript@5.8.3))':
     dependencies:
       '@nuxt/icon': 1.13.0(magicast@0.3.5)(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.2)(yaml@2.8.0))(vue@3.5.15(typescript@5.8.3))
       '@nuxtjs/color-mode': 3.5.2(magicast@0.3.5)
       '@poupe/css': 0.2.4
-      '@poupe/tailwindcss': 0.3.10(tailwindcss@4.1.7)
-      '@poupe/theme-builder': 0.9.0
+      '@poupe/tailwindcss': 0.3.13(tailwindcss@4.1.7)
+      '@poupe/theme-builder': 0.9.3
       '@poupe/vue': 0.4.4(react@19.1.0)(typescript@5.8.3)
       '@tailwindcss/vite': 4.1.7(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.2)(yaml@2.8.0))
       consola: 3.4.2
@@ -6262,17 +6270,17 @@ snapshots:
       - vite
       - vue
 
-  '@poupe/tailwindcss@0.3.10(tailwindcss@4.1.7)':
+  '@poupe/tailwindcss@0.3.13(tailwindcss@4.1.7)':
     dependencies:
-      '@poupe/css': 0.2.4
-      '@poupe/theme-builder': 0.9.0
+      '@poupe/css': 0.3.0
+      '@poupe/theme-builder': 0.9.3
       tailwindcss: 4.1.7
       type-fest: 4.41.0
 
-  '@poupe/theme-builder@0.9.0':
+  '@poupe/theme-builder@0.9.3':
     dependencies:
-      '@poupe/css': 0.2.4
-      '@poupe/material-color-utilities': 0.3.4
+      '@poupe/css': 0.3.0
+      '@poupe/material-color-utilities': 0.3.5
       colord: 2.9.3
       defu: 6.1.4
       type-fest: 4.41.0
@@ -6281,8 +6289,8 @@ snapshots:
     dependencies:
       '@iconify-json/svg-spinners': 1.2.2
       '@iconify/vue': 5.0.0(vue@3.5.15(typescript@5.8.3))
-      '@poupe/tailwindcss': 0.3.10(tailwindcss@4.1.7)
-      '@poupe/theme-builder': 0.9.0
+      '@poupe/tailwindcss': 0.3.13(tailwindcss@4.1.7)
+      '@poupe/theme-builder': 0.9.3
       '@unhead/vue': 2.0.10(vue@3.5.15(typescript@5.8.3))
       reka-ui: 2.2.1(typescript@5.8.3)(vue@3.5.15(typescript@5.8.3))
       tailwind-merge: 3.3.0
