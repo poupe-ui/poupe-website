@@ -1,2 +1,4 @@
 ignoredBuiltDependencies:
   - '@poupe/eslint-config'
+onlyBuiltDependencies:
+  - workerd
