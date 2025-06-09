@@ -1,4 +1,2 @@
-patchedDependencies:
-  pinia@2.3.1: patches/pinia@2.3.1.patch
 ignoredBuiltDependencies:
   - '@poupe/eslint-config'
