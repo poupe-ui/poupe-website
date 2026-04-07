@@ -11,7 +11,6 @@ const autoFix = !isProduction
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxt/fonts',
     '@pinia/nuxt',
     '@poupe/nuxt',
     'nitro-cloudflare-dev',
