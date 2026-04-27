@@ -36,7 +36,7 @@
     "@nuxt/icon": "^1.13.0",
     "@poupe/eslint-config": "^0.6.4",
     "eslint": "^9.28.0",
-    "h3": "^1.15.3",
+    "h3": "^1.15.11",
     "nitro-cloudflare-dev": "^0.2.2",
     "nuxt-svgo": "^4.2.2",
     "typescript": "^5.8.3",
