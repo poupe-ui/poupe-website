@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@iconify-json/heroicons": "^1.2.2",
+    "@iconify-json/heroicons": "^1.2.3",
     "@pinia/nuxt": "^0.11.1",
     "@poupe/css": "^0.3.0",
     "@poupe/nuxt": "^0.4.0",
